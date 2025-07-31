@@ -20,7 +20,7 @@ export class DicionaryService {
     return this.http.post(this.apiUrl, dictionary);
   }
 
-  pustDictionary(id: number, dictionary: any): Observable<any> {
+  putDictionary(id: number, dictionary: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, dictionary);
   }
 

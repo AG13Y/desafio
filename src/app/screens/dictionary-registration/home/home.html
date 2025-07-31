@@ -12,29 +12,14 @@
 	<tbody>
         @for (dictionary of dictionaries(); track dictionary.codigo; let i = $index) {
         <tr>
-				<th>{{ dictionary.nome }}</th>
-				<td class="btn-icone" title="Visualizar"><i class="bi bi-search"></i></td>
+				<th><a routerLink="/reference-dictionary">{{ dictionary.nome }}</a></th>
+				<td class="btn-icone" title="Visualizar"><a routerLink="/reference-dictionary"><i class="bi bi-search"></i></a></td>
 				<td class="btn-icone" title="Palavras"><i class="bi bi-alphabet"></i></td>
 				<td class="btn-icone" title="Configurar"><i class="bi bi-gear-fill"></i></td>
-                <td class="btn-icone" title="Excluir"><i class="bi bi-x-lg"></i></td>
+        <td class="btn-icone" title="Excluir" (click)="deleteDictionary(dictionary.codigo)"><i class="bi bi-x-lg"></i></td>
 		</tr>
     }
-		<!-- @for (country of countries; track country.name; let i = $index) {
-			<tr>
-				<th scope="row">{{ i + 1 }}</th>
-				<td>
-					<img
-						[src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag"
-						[alt]="'The flag of ' + country.name"
-						class="me-2"
-						style="width: 20px"
-					/>
-					{{ country.name }}
-				</td>
-				<td>{{ country.area | number }}</td>
-				<td>{{ country.population | number }}</td>
-			</tr>
-		} -->
+
 	</tbody>
 </table>
 </div>

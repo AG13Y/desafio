@@ -20,3 +20,12 @@
     color: #263D8A;
     font-size: 1.5rem; 
 }
+
+.btn-icone i:hover {
+  cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
