@@ -1,0 +1,21 @@
+{
+  "Dicionario": [
+    {
+      "Codigo": 10000,
+      "Nome": "",
+      "Cor_Botao": "#000000",
+      "Cor_Botao_Fonte": "#FFFFFF",
+      "Cor_Titulo": "#FFFFFF",
+      "Cor_Icone": "#FFFFFF"
+    }
+  ],
+  "DicionarioTexto": [
+    {
+      "Codigo": 1,
+      "Cod_Dicionario": 10000,
+      "Texto": "",
+      "Definicao": "",
+      "Definicao_Extra": ""
+    }
+  ]
+}
