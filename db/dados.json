@@ -1,21 +1,37 @@
 {
   "Dicionario": [
     {
-      "Codigo": 10000,
-      "Nome": "",
-      "Cor_Botao": "#000000",
-      "Cor_Botao_Fonte": "#FFFFFF",
-      "Cor_Titulo": "#FFFFFF",
-      "Cor_Icone": "#FFFFFF"
+      "codigo": 10000,
+      "nome": "Dicionário Join RH",
+      "cor_botao": "#000000",
+      "cor_botao_fonte": "#FFFFFF",
+      "cor_titulo": "#FFFFFF",
+      "cor_icone": "#FFFFFF"
+    },
+    {
+      "codigo": 10001,
+      "nome": "Dicionário RH",
+      "cor_botao": "#000000",
+      "cor_botao_fonte": "#FFFFFF",
+      "cor_titulo": "#FFFFFF",
+      "cor_icone": "#FFFFFF"
+    },
+    {
+      "codigo": 10002,
+      "nome": "Dicionário Geral",
+      "cor_botao": "#000000",
+      "cor_botao_fonte": "#FFFFFF",
+      "cor_titulo": "#FFFFFF",
+      "cor_icone": "#FFFFFF"
     }
   ],
   "DicionarioTexto": [
     {
-      "Codigo": 1,
-      "Cod_Dicionario": 10000,
-      "Texto": "",
-      "Definicao": "",
-      "Definicao_Extra": ""
+      "codigo": 1,
+      "cod_dicionario": 10000,
+      "texto": "",
+      "definicao": "",
+      "definicao_extra": ""
     }
   ]
 }

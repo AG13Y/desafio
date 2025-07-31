@@ -1,0 +1,13 @@
+.cabecalho {
+    width: 16rem;
+    display: flex;
+    margin-left: 8px;
+    align-items: flex-start;
+}
+
+.bi-plus-circle-fill{
+    color: blue;
+    height: 80%;
+    width: 200px;
+
+}

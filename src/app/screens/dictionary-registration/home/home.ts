@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { OrdenarAlfabeticamentePipe } from '../../../shared/pipes/ordenar-alfabeticamente-pipe';
+
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [OrdenarAlfabeticamentePipe],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
