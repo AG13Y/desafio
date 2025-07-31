@@ -1,5 +1,5 @@
 {
-  "Dicionario": [
+  "dicionario": [
     {
       "codigo": 10000,
       "nome": "Dicionário Join RH",
@@ -25,7 +25,7 @@
       "cor_icone": "#FFFFFF"
     }
   ],
-  "DicionarioTexto": [
+  "dicionario_texto": [
     {
       "codigo": 1,
       "cod_dicionario": 10000,
