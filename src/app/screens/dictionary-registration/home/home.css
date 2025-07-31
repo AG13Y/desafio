@@ -1,13 +1,22 @@
+.container {
+    width: 80%;
+}
+
 .cabecalho {
     width: 16rem;
     display: flex;
-    margin-left: 8px;
-    align-items: flex-start;
+    align-items: center; 
+    gap: 1rem;
+    margin-top: 2rem; 
 }
 
-.bi-plus-circle-fill{
-    color: blue;
-    height: 80%;
-    width: 200px;
+.cabecalho h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #263D8A; 
+}
 
+.btn-icone i {
+    color: #263D8A;
+    font-size: 1.5rem; 
 }
