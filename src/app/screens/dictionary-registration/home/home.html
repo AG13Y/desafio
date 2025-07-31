@@ -10,21 +10,15 @@
 
 <table class="table table-striped">
 	<tbody>
+        @for (dictionary of dictionaries(); track dictionary.codigo; let i = $index) {
         <tr>
-				<th>Carregando</th>
+				<th>{{ dictionary.nome }}</th>
 				<td class="btn-icone" title="Visualizar"><i class="bi bi-search"></i></td>
 				<td class="btn-icone" title="Palavras"><i class="bi bi-alphabet"></i></td>
 				<td class="btn-icone" title="Configurar"><i class="bi bi-gear-fill"></i></td>
                 <td class="btn-icone" title="Excluir"><i class="bi bi-x-lg"></i></td>
 		</tr>
-        <tr>
-				<th>Carregando</th>
-				<td class="btn-icone"><i class="bi bi-search"></i></td>
-				<td class="btn-icone"><i class="bi bi-alphabet"></i></td>
-				<td class="btn-icone"><i class="bi bi-gear-fill"></i></td>
-                <td class="btn-icone"><i class="bi bi-x-lg"></i></td>
-		</tr>
-            
+    }
 		<!-- @for (country of countries; track country.name; let i = $index) {
 			<tr>
 				<th scope="row">{{ i + 1 }}</th>
