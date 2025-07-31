@@ -25,8 +25,9 @@ export class Home {
     });
   }
 
-  deleteDictionary(codigo: number) {
+  deleteDictionaries(codigo: number) {
     const confirmDelete = window.confirm("Deseja excluir o Dicionário?");
+
     if (confirmDelete) {
       this.dicionaryService.deleteDictionary(codigo).subscribe(() => {
         this.getDicionaries();
@@ -34,8 +35,8 @@ export class Home {
     }
   }
 
-  editDictionary(dictionary: any) {
-    this.dicionaryService.putDictionary(dictionary.codigo, dictionary).subscribe(() => {
+  editDictionary(dicionario: any) {
+    this.dicionaryService.putDictionary(dicionario.id, dicionario).subscribe(() => {
       this.getDicionaries();
     });
   }
