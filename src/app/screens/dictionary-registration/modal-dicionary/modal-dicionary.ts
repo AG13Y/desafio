@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { BsModalRef} from 'ngx-bootstrap/modal';
+import { DicionaryService } from '../../../shared/services/dicionary.services';
 
 @Component({
   selector: 'app-modal-dicionary',
@@ -13,4 +14,6 @@ export class ModalDicionary {
   closeModal() {
     this.bsModalRef.hide();
   }
+ dictionary: any;
+
 }
