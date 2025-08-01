@@ -9,11 +9,13 @@ import { DicionaryService } from '../../../shared/services/dicionary.services';
   styleUrl: './modal-dicionary.css'
 })
 export class ModalDicionary {
+  dictionary: any;
+  
   constructor(public bsModalRef: BsModalRef) {}
 
   closeModal() {
     this.bsModalRef.hide();
   }
- dictionary: any;
+
 
 }
