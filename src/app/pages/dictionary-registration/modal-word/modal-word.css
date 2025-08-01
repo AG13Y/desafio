@@ -1,3 +1,12 @@
+.custom-modal-size .modal-dialog {
+  max-width: 56.25rem; 
+  width: 90vw;
+}
+
+.custom-modal-size .modal-content {
+  min-height: 25rem;
+}
+
 
 .cabecalho {
     background-color: #263D8A;

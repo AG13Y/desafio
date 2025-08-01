@@ -55,7 +55,8 @@ export class DictionaryWord {
     initialState: {
       texto: payload,
       onSave: () => this.getPalavras()
-    }
+    },
+    class: 'modal-lg custom-modal-size'
   });
 }
 
