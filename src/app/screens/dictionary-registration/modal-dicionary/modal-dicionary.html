@@ -11,9 +11,13 @@
 
 <div class="body">
     <div class="body">
-    <form>
+    <form (ngSubmit)="saveEdit()">
         <label for="nome">Título</label>
-        <input id="nome" [(ngModel)]="dictionary.nome" name="nome" class="form-control" placeholder="Nome do dicionário" />
+        <input id="nome" [(ngModel)]="editDictionary.nome" name="nome" class="form-control" placeholder="Nome do dicionário" />
+    
+        <span class="btn-save">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        </span>
     </form>
     
 </div>

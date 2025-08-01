@@ -42,5 +42,23 @@ label{
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+}
+
+.btn-save{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-save button{
+    width: 30%;
+    background-color: #263D8A;
+    border: none;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
