@@ -18,7 +18,7 @@
 }
 
 .cabecalho h1 {
-    margin: 0;
+    margin: 10px;
     font-size: 1.5rem;
     color: #fff;
     width: 100%;
@@ -33,16 +33,11 @@
   cursor: pointer;
 }
 
-.space {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
 .body{
     display: flex;
     width: 95%;
     justify-content: center;
+    margin-left: 1rem;
 }
 
 label{
