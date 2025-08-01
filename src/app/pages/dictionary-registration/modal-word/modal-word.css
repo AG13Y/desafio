@@ -1,0 +1,85 @@
+
+.cabecalho {
+    background-color: #263D8A;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+    padding: 0px 10px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    width: 100%;
+}
+
+.btn-icone i {
+    color: #fff;
+    font-size: 1.5rem; 
+}
+
+.btn-icone i:hover {
+  cursor: pointer;
+}
+
+.space {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.body{
+    display: flex;
+    width: 95%;
+    justify-content: center;
+}
+
+label{
+    color: #878787;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-save{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-save button{
+    width: 30%;
+    background-color: #263D8A;
+    border: none;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.form-color-group{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.form-color-group input {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    margin-left: 1rem;
+}
+
+.form-color-group label {
+    margin-left: 1.25rem;
+    color: #878787;
+}

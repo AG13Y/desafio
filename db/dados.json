@@ -8,7 +8,7 @@
       "cor_icone": "#1032da",
       "id": "11d8"
     },
-    {      
+    {
       "nome": "Dicionário RH",
       "cor_botao": "#000000",
       "cor_botao_fonte": "#FFFFFF",
@@ -16,7 +16,7 @@
       "cor_icone": "#FFFFFF",
       "id": "6272"
     },
-    {      
+    {
       "nome": "Dicionário Geral",
       "cor_botao": "#000000",
       "cor_botao_fonte": "#FFFFFF",
@@ -26,27 +26,26 @@
     }
   ],
   "dicionario_texto": [
-    {      
-      "dicionarioId": "11d8",
+    {
       "texto": "AAA",
       "definicao": "sasasa",
       "definicao_extra": "sasaas",
+      "dicionarioId": "11d8",
       "id": "9ec0"
     },
-    {      
+    {
       "dicionarioId": "11d8",
       "texto": "CCC",
       "definicao": "asasas",
       "definicao_extra": "aaaa",
       "id": "9142"
     },
-    {      
+    {
       "dicionarioId": "11d8",
       "texto": "BBBB",
       "definicao": "aaaaa",
       "definicao_extra": "aaaa12",
       "id": "9eg0"
     }
-
   ]
 }
