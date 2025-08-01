@@ -24,7 +24,7 @@ export class ModalWord {
   ngOnInit() {
     this.form = this.fb.group({
       texto: [this.texto?.texto || '', Validators.required],
-      definicao: [this.texto?.definicao || ''],
+      definicao: [this.texto?.definicao || '', Validators.required],
       definicao_extra: [this.texto?.definicao_extra || ''],
       dicionarioId: [this.texto?.dicionarioId || '', Validators.required]
     });
@@ -38,13 +38,13 @@ export class ModalWord {
     if (this.form.invalid) return;
 
     if (this.texto?.id) {
-      // Editar texto existente
+      
       this.wordService.putDictionaryTexts(this.texto.id, this.form.value).subscribe(() => {
         if (this.onSave) this.onSave();
         this.closeModal();
       });
     } else {
-      // Criar novo texto
+      
       this.wordService.postDictionaryTexts(this.form.value).subscribe(() => {
         if (this.onSave) this.onSave();
         this.closeModal();
