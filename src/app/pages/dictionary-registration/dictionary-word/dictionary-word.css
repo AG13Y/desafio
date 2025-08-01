@@ -18,11 +18,15 @@
 }
 
 .btn-icone i {
-    color: #fff;
+    color: #263D8A;
     font-size: 1.5rem; 
 }
 
-.btn-palavra {
+.btn-icone i:hover {
+  cursor: pointer;
+}
+
+.btn-palavra{
     width: 10rem;
     background-color: #263D8A;
     color: #fff;
@@ -33,9 +37,18 @@
     align-items: center;
 }
 
+.btn-palavra i {
+    color: #fff;
+}
+
 .btn-palavra p{
     margin-left: 1rem;
+    margin-bottom: 0px;
     padding: 0;
     align-items: center;
     display: inline;
+}
+
+.td-texto{
+    width: 90%;
 }
