@@ -1,12 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
 import { DicionaryService } from '../../../shared/services/dicionary.services';
 import { RouterLink } from '@angular/router';
+import { ModalDicionary } from '../modal-dicionary/modal-dicionary';
+import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, ModalModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -23,6 +25,14 @@ export class Home {
     this.dicionaryService.getDictionarys().subscribe(data => {
       this.dictionaries.set(data);
     });
+  }
+
+  bsModalRef?: BsModalRef;
+  
+  constructor(private modalService: BsModalService) {}
+
+  openModal() {
+    this.bsModalRef = this.modalService.show(ModalDicionary);
   }
 
   deleteDictionaries(codigo: number) {

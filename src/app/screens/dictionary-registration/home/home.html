@@ -15,7 +15,7 @@
 				<th><a routerLink="/reference-dictionary">{{ dictionary.nome }}</a></th>
 				<td class="btn-icone" title="Visualizar"><a routerLink="/reference-dictionary"><i class="bi bi-search"></i></a></td>
 				<td class="btn-icone" title="Palavras"><i class="bi bi-alphabet"></i></td>
-				<td class="btn-icone" title="Configurar"><i class="bi bi-gear-fill"></i></td>
+				<td class="btn-icone" title="Configurar" (click)="openModal()"><i class="bi bi-gear-fill"></i></td>
         <td class="btn-icone" title="Excluir" (click)="deleteDictionaries(dictionary.id)"><i class="bi bi-x-lg"></i></td>
 		</tr>
     }
