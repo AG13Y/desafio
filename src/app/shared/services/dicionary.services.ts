@@ -12,7 +12,7 @@ export class DicionaryService {
 
   constructor() { }
 
-  getDictionary(id: number): Observable<any> {
+  getDictionary(id: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/${id}`);
   }
 

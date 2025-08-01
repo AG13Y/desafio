@@ -34,7 +34,8 @@ constructor(private modalService: BsModalService) {}
   openModal(dictionary: any ) {
     this.bsModalRef = this.modalService.show(ModalDicionary, {
       initialState: {
-        dictionary
+        dictionary,
+        onSave: () => this.getDicionaries()
       }
     });
   }

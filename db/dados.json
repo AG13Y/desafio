@@ -1,12 +1,11 @@
 {
   "dicionario": [
     {
-      "codigo": 10000,
       "nome": "Dicionário Join RH",
-      "cor_botao": "#000000",
-      "cor_botao_fonte": "#FFFFFF",
-      "cor_titulo": "#FFFFFF",
-      "cor_icone": "#FFFFFF",
+      "cor_botao": "#cfcfcf",
+      "cor_botao_fonte": "#112cb6",
+      "cor_titulo": "#1613e7",
+      "cor_icone": "#1032da",
       "id": "11d8"
     },
     {

@@ -36,6 +36,7 @@
 }
 
 label{
+    color: #878787;
     margin-top: 15px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -61,4 +62,23 @@ form {
     border: none;
     margin-top: 25px;
     margin-bottom: 10px;
+}
+
+.form-color-group{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.form-color-group input {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    margin-left: 1rem;
+}
+
+.form-color-group label {
+    margin-left: 1.25rem;
+    color: #878787;
 }
