@@ -28,3 +28,19 @@
     width: 100%;
     justify-content: flex-end;
 }
+
+.body{
+    display: flex;
+    width: 95%;
+    justify-content: center;
+}
+
+label{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+form {
+    width: 100%;
+}

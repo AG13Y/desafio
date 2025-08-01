@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { BsModalRef} from 'ngx-bootstrap/modal';
-import { DicionaryService } from '../../../shared/services/dicionary.services';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-modal-dicionary',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './modal-dicionary.html',
   styleUrl: './modal-dicionary.css'
 })
