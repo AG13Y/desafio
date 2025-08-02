@@ -52,3 +52,15 @@
 .td-texto{
     width: 90%;
 }
+
+.pagination-letras button {
+    width: 3rem;
+    background-color: #BDE5FD;
+    color: #498AC7;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    border-radius: 1px;
+}

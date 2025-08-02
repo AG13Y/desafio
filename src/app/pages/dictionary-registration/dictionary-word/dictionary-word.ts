@@ -19,6 +19,10 @@ export class DictionaryWord {
   route = inject(ActivatedRoute);
   dicionaryService = inject(DicionaryService);
   wordService = inject(WordService);
+
+  letras: string[] = [];
+  letraSelecionada: string = '';
+  palavrasPaginadas: any[] = [];
   
   constructor(private modalService: BsModalService) {}
 
@@ -35,8 +39,38 @@ export class DictionaryWord {
   getPalavras() {
   const id = String(this.route.snapshot.paramMap.get('id'));
   this.wordService.getDictionaryTexts().subscribe(textos => {
-    this.palavras = textos.filter(texto => texto.dicionarioId === id);
-  });
+      let palavrasFiltradas = textos.filter(texto => texto.dicionarioId === id);
+
+      
+      palavrasFiltradas = palavrasFiltradas.sort((a, b) => a.texto.localeCompare(b.texto));
+
+      this.palavras = palavrasFiltradas;
+      this.setupPagination();
+    });
+}
+
+  setupPagination() {
+  
+  this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
+
+  
+  if (this.palavras.length < 25) {
+    this.letraSelecionada = '';
+    this.palavrasPaginadas = this.palavras;
+  } else {
+    
+    this.letraSelecionada = this.letras[0];
+    this.filtrarPorLetra(this.letraSelecionada);
+  }
+}
+
+filtrarPorLetra(letra: string) {
+  this.letraSelecionada = letra;
+  if (letra === '') {
+    this.palavrasPaginadas = this.palavras;
+  } else {
+    this.palavrasPaginadas = this.palavras.filter(p => p.texto[0].toUpperCase() === letra);
+  }
 }
 
   deletePalavra(id: string) {

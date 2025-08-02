@@ -12,7 +12,7 @@
 
 <table class="table table-striped">
   <tbody>
-    @for (palavra of palavras; track palavra.id; let i = $index) {
+    @for (palavra of palavrasPaginadas; track palavra.id; let i = $index) {
       <tr>
         <td class="td-texto">{{ palavra.texto }}</td>
         <td class="btn-icone" title="Editar" (click)="openModal(palavra)"><i class="bi bi-pencil"></i></td>
@@ -21,5 +21,26 @@
     }
   </tbody>
 </table>
+
+<div class="pagination-letras">
+  @if (letras.length > 1) {
+
+    @for (letra of letras; track letra) {
+      <button
+        [class.selected]="letra === letraSelecionada"
+        (click)="filtrarPorLetra(letra)">
+        {{ letra }}
+      </button>
+    }
+
+    <button
+      [class.selected]="letraSelecionada === ''"
+      (click)="filtrarPorLetra('')">
+      Todos
+    </button>
+  }
+</div>
+
+
 
 </div>

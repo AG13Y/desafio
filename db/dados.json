@@ -3,9 +3,9 @@
     {
       "nome": "Dicionário Join RH",
       "cor_botao": "#cfcfcf",
-      "cor_botao_fonte": "#112cb6",
-      "cor_titulo": "#1613e7",
-      "cor_icone": "#1032da",
+      "cor_botao_fonte": "#b63a11",
+      "cor_titulo": "#e4e713",
+      "cor_icone": "#da10c9",
       "id": "11d8"
     },
     {
@@ -23,6 +23,14 @@
       "cor_titulo": "#FFFFFF",
       "cor_icone": "#FFFFFF",
       "id": "1232"
+    },
+    {
+      "id": "d161",
+      "nome": "bvbcvbcb",
+      "cor_botao": "#8c2684",
+      "cor_botao_fonte": "#FFFFFF",
+      "cor_titulo": "#4dae67",
+      "cor_icone": "#263D8A"
     }
   ],
   "dicionario_texto": [
@@ -46,6 +54,68 @@
       "definicao": "aaaaa",
       "definicao_extra": "aaaa12",
       "id": "9eg0"
-    }
+    },
+    {
+      "id": "3577",
+      "texto": "manduco",
+      "definicao": "manduco me flumen de te",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "e33b",
+      "texto": "Abelha",
+      "definicao": "1221",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "ad88",
+      "texto": "Agulha",
+      "definicao": "213321213",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "ce5c",
+      "texto": "Arvore ",
+      "definicao": "414121312",
+      "definicao_extra": "213231",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "0122",
+      "texto": "Batata",
+      "definicao": "423432324",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "bbd8",
+      "texto": "mamacu",
+      "definicao": "213231",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    { "id": "t01", "texto": "Abacate", "definicao": "Fruta verde", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t02", "texto": "Banana", "definicao": "Fruta amarela", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t03", "texto": "Caju", "definicao": "Fruta tropical", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t04", "texto": "Damasco", "definicao": "Fruta doce", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t05", "texto": "Embaúba", "definicao": "Árvore brasileira", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t06", "texto": "Figo", "definicao": "Fruta roxa", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t07", "texto": "Goiaba", "definicao": "Fruta vermelha", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t08", "texto": "Hortelã", "definicao": "Planta aromática", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t09", "texto": "Ingá", "definicao": "Fruta amazônica", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t10", "texto": "Jaca", "definicao": "Fruta grande", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t11", "texto": "Kiwi", "definicao": "Fruta peluda", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t12", "texto": "Laranja", "definicao": "Fruta cítrica", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t13", "texto": "Mamão", "definicao": "Fruta tropical", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t14", "texto": "Nêspera", "definicao": "Fruta amarela", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t15", "texto": "Oliva", "definicao": "Fruta do azeite", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t16", "texto": "Pera", "definicao": "Fruta suculenta", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t17", "texto": "Quina", "definicao": "Planta medicinal", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t18", "texto": "Romã", "definicao": "Fruta vermelha", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t19", "texto": "Sapoti", "definicao": "Fruta doce", "definicao_extra": "", "dicionarioId": "11d8" },
+  { "id": "t20", "texto": "Tamarindo", "definicao": "Fruta ácida", "definicao_extra": "", "dicionarioId": "11d8" }
   ]
 }
