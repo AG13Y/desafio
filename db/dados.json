@@ -25,12 +25,12 @@
       "id": "1232"
     },
     {
-      "id": "d161",
       "nome": "bvbcvbcb",
       "cor_botao": "#8c2684",
       "cor_botao_fonte": "#FFFFFF",
       "cor_titulo": "#4dae67",
-      "cor_icone": "#263D8A"
+      "cor_icone": "#22e01f",
+      "id": "d161"
     }
   ],
   "dicionario_texto": [

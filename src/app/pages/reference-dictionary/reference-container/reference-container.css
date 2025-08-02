@@ -1,0 +1,40 @@
+.container {
+  width: 95%;
+}
+
+.cabecalho{
+  display: flex;
+  align-items: center;
+}
+
+.texto{
+    width: 90%;
+}
+
+.btn-icone i {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.pagination-letras button {
+    width: 3rem;
+    background-color: #BDE5FD;
+    color: #498AC7;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    border-radius: 1px;
+}
+
+.pagination-letras {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.td-texto {
+  width: 90%;
+}

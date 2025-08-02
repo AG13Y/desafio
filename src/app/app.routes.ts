@@ -8,7 +8,7 @@ export const routes: Routes = [
 
     {path: 'home', component: Home},
 
-    {path: 'reference-dictionary', component: ReferenceContainer},
+    {path: 'reference-dictionary/:id', component: ReferenceContainer},
 
     {path: 'dictionary-word/:id', component: DictionaryWord}
 ];
