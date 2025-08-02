@@ -35,13 +35,6 @@
   ],
   "dicionario_texto": [
     {
-      "texto": "AAA",
-      "definicao": "sasasa",
-      "definicao_extra": "<p></p><b>Abelhino</b><p></p>",
-      "dicionarioId": "11d8",
-      "id": "9ec0"
-    },
-    {
       "dicionarioId": "11d8",
       "texto": "CCC",
       "definicao": "asasas",
@@ -63,27 +56,6 @@
       "dicionarioId": "11d8"
     },
     {
-      "id": "e33b",
-      "texto": "Abelha",
-      "definicao": "1221",
-      "definicao_extra": "",
-      "dicionarioId": "11d8"
-    },
-    {
-      "id": "ad88",
-      "texto": "Agulha",
-      "definicao": "213321213",
-      "definicao_extra": "",
-      "dicionarioId": "11d8"
-    },
-    {
-      "id": "ce5c",
-      "texto": "Arvore ",
-      "definicao": "414121312",
-      "definicao_extra": "213231",
-      "dicionarioId": "11d8"
-    },
-    {
       "id": "0122",
       "texto": "Batata",
       "definicao": "423432324",
@@ -94,13 +66,6 @@
       "id": "bbd8",
       "texto": "mamacu",
       "definicao": "213231",
-      "definicao_extra": "",
-      "dicionarioId": "11d8"
-    },
-    {
-      "id": "t01",
-      "texto": "Abacate",
-      "definicao": "Fruta verde",
       "definicao_extra": "",
       "dicionarioId": "11d8"
     },
@@ -238,9 +203,65 @@
       "dicionarioId": "11d8"
     },
     {
-      "id": "51b5",
-      "texto": "A",
-      "definicao": "12",
+      "id": "414a",
+      "texto": "Baba",
+      "definicao": "213231",
+      "definicao_extra": "123123",
+      "dicionarioId": "6272"
+    },
+    {
+      "id": "d441",
+      "texto": "Bcaju",
+      "definicao": "123321",
+      "definicao_extra": "",
+      "dicionarioId": "6272"
+    },
+    {
+      "id": "4787",
+      "texto": "baGA",
+      "definicao": "312",
+      "definicao_extra": "",
+      "dicionarioId": "d161"
+    },
+    {
+      "id": "3832",
+      "texto": "hAGA",
+      "definicao": "321312",
+      "definicao_extra": "",
+      "dicionarioId": "d161"
+    },
+    {
+      "id": "5ce8",
+      "texto": "bebew",
+      "definicao": "2323",
+      "definicao_extra": "",
+      "dicionarioId": "d161"
+    },
+    {
+      "id": "cf3a",
+      "texto": "zio",
+      "definicao": "dg",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "0e9d",
+      "texto": "galão",
+      "definicao": "xcxdv",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "4f7d",
+      "texto": "ggg",
+      "definicao": "ggg",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "7d9d",
+      "texto": "gato",
+      "definicao": "ddd",
       "definicao_extra": "",
       "dicionarioId": "11d8"
     }

@@ -19,6 +19,12 @@
     <label for="definicao">Definição</label>
     <input id="definicao" formControlName="definicao" class="form-control" placeholder="Definição" />
 
+    @if (form.get('definicao')?.invalid && form.get('definicao')?.touched) {
+      <div style="color:red; font-size:0.9rem;">
+        A definição é obrigatória.
+      </div>
+    }
+
     <label for="definicao_extra">Definição extra</label>
     <angular-editor formControlName="definicao_extra" [config]="editorConfig"></angular-editor>
 

@@ -22,8 +22,8 @@ export class WordService {
     return this.http.put(`${this.apiUrl}/${id}`, word);
   }
 
-  getDictionaryTexts(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  getDictionaryTexts(dicionarioId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}?dicionarioId=${dicionarioId}&_sort=texto`);
   }
 
   deleteDictionaryTexts(id: string): Observable<any> {

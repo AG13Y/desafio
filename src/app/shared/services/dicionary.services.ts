@@ -25,7 +25,7 @@ export class DicionaryService {
   }
 
   getDictionarys(): Observable<any[]> {
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<any>(`${this.apiUrl}?_sort=nome`);
   }
   
   deleteDictionary(id: number): Observable<any> {
