@@ -1,7 +1,7 @@
 
 <div class="cabecalho">
     <span class="btn-icone"><i class="bi bi-pencil"></i></span>
-  <h1>Editar palavra</h1>
+  <h1>{{texto?.id ? "Editar palavra" : "Nova palavra"}}</h1>
   <span class="btn-icone"><i class="bi bi-x-lg" (click)="closeModal()"></i></span>
 </div>
 
@@ -20,7 +20,7 @@
     <input id="definicao" formControlName="definicao" class="form-control" placeholder="Definição" />
 
     <label for="definicao_extra">Definição extra</label>
-    <textarea id="definicao_extra" formControlName="definicao_extra" class="form-control" placeholder="Definição extra" rows="4"></textarea>
+    <angular-editor formControlName="definicao_extra" [config]="editorConfig"></angular-editor>
 
     <span class="btn-save">
       <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Salvar</button>

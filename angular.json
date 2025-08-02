@@ -23,7 +23,12 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              {
+                 "glob": "**/*",
+                  "input": "node_modules/@kolkov/angular-editor/assets/icons",
+                  "output": "assets/ae-icons/"
+}
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",

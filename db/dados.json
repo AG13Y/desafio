@@ -37,7 +37,7 @@
     {
       "texto": "AAA",
       "definicao": "sasasa",
-      "definicao_extra": "sasaas",
+      "definicao_extra": "<p></p><b>Abelhino</b><p></p>",
       "dicionarioId": "11d8",
       "id": "9ec0"
     },
@@ -97,25 +97,152 @@
       "definicao_extra": "",
       "dicionarioId": "11d8"
     },
-    { "id": "t01", "texto": "Abacate", "definicao": "Fruta verde", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t02", "texto": "Banana", "definicao": "Fruta amarela", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t03", "texto": "Caju", "definicao": "Fruta tropical", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t04", "texto": "Damasco", "definicao": "Fruta doce", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t05", "texto": "Embaúba", "definicao": "Árvore brasileira", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t06", "texto": "Figo", "definicao": "Fruta roxa", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t07", "texto": "Goiaba", "definicao": "Fruta vermelha", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t08", "texto": "Hortelã", "definicao": "Planta aromática", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t09", "texto": "Ingá", "definicao": "Fruta amazônica", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t10", "texto": "Jaca", "definicao": "Fruta grande", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t11", "texto": "Kiwi", "definicao": "Fruta peluda", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t12", "texto": "Laranja", "definicao": "Fruta cítrica", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t13", "texto": "Mamão", "definicao": "Fruta tropical", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t14", "texto": "Nêspera", "definicao": "Fruta amarela", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t15", "texto": "Oliva", "definicao": "Fruta do azeite", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t16", "texto": "Pera", "definicao": "Fruta suculenta", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t17", "texto": "Quina", "definicao": "Planta medicinal", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t18", "texto": "Romã", "definicao": "Fruta vermelha", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t19", "texto": "Sapoti", "definicao": "Fruta doce", "definicao_extra": "", "dicionarioId": "11d8" },
-  { "id": "t20", "texto": "Tamarindo", "definicao": "Fruta ácida", "definicao_extra": "", "dicionarioId": "11d8" }
+    {
+      "id": "t01",
+      "texto": "Abacate",
+      "definicao": "Fruta verde",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t02",
+      "texto": "Banana",
+      "definicao": "Fruta amarela",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t03",
+      "texto": "Caju",
+      "definicao": "Fruta tropical",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t04",
+      "texto": "Damasco",
+      "definicao": "Fruta doce",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t05",
+      "texto": "Embaúba",
+      "definicao": "Árvore brasileira",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t06",
+      "texto": "Figo",
+      "definicao": "Fruta roxa",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t07",
+      "texto": "Goiaba",
+      "definicao": "Fruta vermelha",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t08",
+      "texto": "Hortelã",
+      "definicao": "Planta aromática",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t09",
+      "texto": "Ingá",
+      "definicao": "Fruta amazônica",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t10",
+      "texto": "Jaca",
+      "definicao": "Fruta grande",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t11",
+      "texto": "Kiwi",
+      "definicao": "Fruta peluda",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t12",
+      "texto": "Laranja",
+      "definicao": "Fruta cítrica",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t13",
+      "texto": "Mamão",
+      "definicao": "Fruta tropical",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t14",
+      "texto": "Nêspera",
+      "definicao": "Fruta amarela",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t15",
+      "texto": "Oliva",
+      "definicao": "Fruta do azeite",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t16",
+      "texto": "Pera",
+      "definicao": "Fruta suculenta",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t17",
+      "texto": "Quina",
+      "definicao": "Planta medicinal",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t18",
+      "texto": "Romã",
+      "definicao": "Fruta vermelha",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t19",
+      "texto": "Sapoti",
+      "definicao": "Fruta doce",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "t20",
+      "texto": "Tamarindo",
+      "definicao": "Fruta ácida",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "51b5",
+      "texto": "A",
+      "definicao": "12",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    }
   ]
 }

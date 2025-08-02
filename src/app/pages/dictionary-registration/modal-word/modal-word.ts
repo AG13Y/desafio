@@ -3,11 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { WordService } from '../../../shared/services/word.services';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularEditorConfig, AngularEditorModule } from '@kolkov/angular-editor';
+
+
 
 @Component({
   selector: 'app-modal-word',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, AngularEditorModule],
   templateUrl: './modal-word.html',
   styleUrl: './modal-word.css'
 })
@@ -19,7 +22,7 @@ export class ModalWord {
   wordService = inject(WordService);
   fb = inject(FormBuilder);
 
-  constructor(public bsModalRef: BsModalRef) { }
+  constructor(public bsModalRef: BsModalRef) { };
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -51,4 +54,18 @@ export class ModalWord {
       });
     }
   }
+
+ editorConfig: AngularEditorConfig = {
+  editable: true,
+  spellcheck: true,
+  height: '10rem',
+  minHeight: '5rem',
+  placeholder: 'Digite a definição extra...',
+  translate: 'no',
+  toolbarPosition: 'top',
+  defaultParagraphSeparator: 'p',
+  toolbarHiddenButtons: [
+    ['insertImage', 'insertVideo']
+  ]
+};
 }
