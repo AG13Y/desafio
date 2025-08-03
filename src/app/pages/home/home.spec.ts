@@ -1,44 +1,93 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { Home } from './home';
 import { DictionaryService } from '../../shared/services/dictionary.services';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { of } from 'rxjs';
-import { BsModalService } from 'ngx-bootstrap/modal';
 
-describe('Home', () => {
+class MockDictionaryService {
+  getDictionarys() {
+    return of([{ id: "1", nome: 'Dicionário Exemplo' }]);
+  }
+
+  deleteDictionary(codigo: string) {
+    return of({});
+  }
+
+  putDictionary(id: string, data: any) {
+    return of({});
+  }
+}
+
+class MockBsModalService {
+  show() {
+    return {
+      content: {},
+    } as BsModalRef;
+  }
+}
+
+describe('Home Component', () => {
   let component: Home;
-  let fixture: ComponentFixture<Home>;
-  let dictionaryServiceSpy: jasmine.SpyObj<DictionaryService>;
-  let bsModalServiceSpy: jasmine.SpyObj<BsModalService>;
+  let modalService: MockBsModalService;
+  let dictionaryService: MockDictionaryService;
 
   beforeEach(async () => {
-  dictionaryServiceSpy = jasmine.createSpyObj('DictionaryService', ['getDictionarys', 'deleteDictionary']);
-  const bsModalServiceSpy = jasmine.createSpyObj('BsModalService', ['show']);
+    await TestBed.configureTestingModule({
+      imports: [Home],
+      providers: [
+        { provide: DictionaryService, useClass: MockDictionaryService },
+        { provide: BsModalService, useClass: MockBsModalService },
+        { provide: BsModalRef, useValue: {} }
+      ]
+    }).compileComponents();
 
-  await TestBed.configureTestingModule({
-    imports: [Home],
-    providers: [
-      { provide: DictionaryService, useValue: dictionaryServiceSpy },
-      { provide: BsModalService, useValue: bsModalServiceSpy }
-    ]
-  }).compileComponents();
-
-    fixture = TestBed.createComponent(Home);
+    const fixture = TestBed.createComponent(Home);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    modalService = TestBed.inject(BsModalService) as any;
+    dictionaryService = TestBed.inject(DictionaryService) as any;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call getDicionaries and set dictionaries', () => {
-    const mockData = [
-      { id: '1', nome: 'Teste', cor_botao: '', cor_botao_fonte: '', cor_titulo: '', cor_icone: '' }
-    ];
-    dictionaryServiceSpy.getDictionarys.and.returnValue(of(mockData));
+  it('should fetch dictionaries on getDicionaries()', () => {
     component.getDicionaries();
-    expect(dictionaryServiceSpy.getDictionarys).toHaveBeenCalled();
-    expect(component.dictionaries()).toEqual(mockData);
+    expect(component.dictionaries()[0].id).toEqual('1');
   });
+
+  it('should open the modal with correct data', () => {
+    const mockDict = { id: 2, nome: 'Teste' };
+    const spy = spyOn(modalService, 'show').and.callThrough();
+
+    component.openModal(mockDict);
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should call deleteDictionary and refresh data', () => {
+    const spyDeleteDictionary = spyOn(dictionaryService, 'deleteDictionary').and.callThrough();
+    const refreshSpy = spyOn(dictionaryService, 'getDictionarys').and.callThrough();
+
+    component.deleteDictionaries('123');
+
+    // chama manualmente a função que estaria no botão "confirmar"
+    const args = (modalService.show as jasmine.Spy).calls.mostRecent().args[1];
+    args.initialState.onConfirm();
+
+    expect(spyDeleteDictionary).toHaveBeenCalledWith('123');
+    expect(refreshSpy).toHaveBeenCalled();
+  });
+
+  it('should call putDictionary and refresh data', () => {
+    const dicionario = { id: '999', nome: 'Update Test' };
+    const putSpy = spyOn(dictionaryService, 'putDictionary').and.callThrough();
+    const refreshSpy = spyOn(dictionaryService, 'getDictionarys').and.callThrough();
+
+    component.editDictionary(dicionario);
+
+    expect(putSpy).toHaveBeenCalledWith('999', dicionario);
+    expect(refreshSpy).toHaveBeenCalled();
+  });
+  
 });
