@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class DicionaryService {
+export class DictionaryService {
   private apiUrl = 'http://localhost:3000/dicionario';
 
   private http = inject(HttpClient);

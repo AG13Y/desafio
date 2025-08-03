@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DicionaryService } from '../../shared/services/dicionary.services';
+import { DictionaryService } from '../../shared/services/dictionary.services';
 import { WordService } from '../../shared/services/word.services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalDicionary } from '../dictionary-registration/components/modal-dicionary/modal-dicionary';
@@ -15,7 +15,7 @@ import { ModalDicionary } from '../dictionary-registration/components/modal-dici
 export class DictionaryView {
 
   route = inject(ActivatedRoute);
-  dicionaryService = inject(DicionaryService);
+  dicionaryService = inject(DictionaryService);
   wordService = inject(WordService);
 
   dictionaries = signal<any[]>([]);

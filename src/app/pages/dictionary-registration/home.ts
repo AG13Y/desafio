@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { DicionaryService } from '../../shared/services/dicionary.services';
+import { DictionaryService } from '../../shared/services/dictionary.services';
 import { RouterLink } from '@angular/router';
 import { ModalDicionary } from './components/modal-dicionary/modal-dicionary';
 import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
@@ -15,7 +15,7 @@ import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 export class Home {
   dictionaries = signal<any[]>([]);
 
-  dicionaryService = inject(DicionaryService);
+  dicionaryService = inject(DictionaryService);
 
   ngOnInit() {
     this.getDicionaries();

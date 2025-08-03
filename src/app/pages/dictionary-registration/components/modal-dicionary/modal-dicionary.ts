@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { DicionaryService } from '../../../../shared/services/dicionary.services';
+import { DictionaryService } from '../../../../shared/services/dictionary.services';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class ModalDicionary {
   form!: FormGroup;
   onSave?: () => void;
 
-  dictionaryService = inject(DicionaryService);
+  dictionaryService = inject(DictionaryService);
   fb = inject(FormBuilder);
 
   constructor(public bsModalRef: BsModalRef) { }

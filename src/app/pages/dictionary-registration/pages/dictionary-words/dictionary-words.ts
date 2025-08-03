@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DicionaryService } from '../../../../shared/services/dicionary.services';
+import { DictionaryService } from '../../../../shared/services/dictionary.services';
 import { WordService } from '../../../../shared/services/word.services';
 import { ModalWord } from '../../components/modal-word/modal-word';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
@@ -17,7 +17,7 @@ export class DictionaryWords {
   dictionary: any;
   palavras: any[] = [];
   route = inject(ActivatedRoute);
-  dicionaryService = inject(DicionaryService);
+  dicionaryService = inject(DictionaryService);
   wordService = inject(WordService);
 
   letras: string[] = [];
