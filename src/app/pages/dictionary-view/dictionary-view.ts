@@ -3,7 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DictionaryService } from '../../shared/services/dictionary.services';
 import { WordService } from '../../shared/services/word.services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ModalDictionary } from '../dictionary-registration/components/modal-dictionary/modal-dictionary';
+import { ModalDictionary } from '../home/components/modal-dictionary/modal-dictionary';
 import { ModalDictionaryWordViewMore } from './components/modal-dictionary-word-view-more/modal-dictionary-word-view-more';
 import { Location } from '@angular/common';
 import { IDictionary } from '../../shared/interfaces/dictionary.interfaces';

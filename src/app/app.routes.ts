@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/dictionary-registration/home';
+import { Home } from './pages/home/home';
 import { DictionaryView } from './pages/dictionary-view/dictionary-view';
-import { DictionaryWords } from './pages/dictionary-registration/pages/dictionary-words/dictionary-words';
+import { DictionaryWords } from './pages/home/pages/dictionary-words/dictionary-words';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
