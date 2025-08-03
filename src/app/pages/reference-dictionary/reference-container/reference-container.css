@@ -31,10 +31,27 @@
 .pagination-letras {
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
-
+.td-nome-palavra{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .td-texto {
-  width: 90%;
+  width: 80%;
+  font-weight: bold;
+}
+
+.td-vermais{
+  display: flex;
+  justify-content: flex-end;
+  width: 19%;
+}
+
+.btn-vermais {
+  border: none;
+  background: none;
+  text-decoration: underline;
 }

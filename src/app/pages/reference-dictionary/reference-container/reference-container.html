@@ -1,62 +1,65 @@
-
 <div class="container">
 
-    <div class="cabecalho">
-    <h1 class="texto"
-        [style.color]="dictionary?.cor_titulo">
+  <div class="cabecalho">
+    <h1 class="texto" [style.color]="dictionary?.cor_titulo">
       {{ dictionary?.nome }}
     </h1>
-    <span class="btn-icone" title="Palavras" [style.color]="dictionary.cor_icone">
-      <i class="bi bi-alphabet"></i>
+    <span class="btn-icone" title="Palavras">
+      <a [routerLink]="['/dictionary-word', dictionary.id]" [style.color]="dictionary.cor_icone">
+        <i class="bi bi-alphabet"></i>
+      </a>
     </span>
-    
-    <span class="btn-icone" title="Configurar" [style.color]="dictionary.cor_icone">
-      <i class="bi bi-gear-fill"
-></i>
+
+    <span class="btn-icone" title="Configurar" [style.color]="dictionary.cor_icone" (click)="openModal(dictionary)">
+      <i class="bi bi-gear-fill"></i>
     </span>
   </div>
 
-    <hr>
+  <hr>
 
-    <div class="pagination-letras">
-  
-        @if (letras.length > 1) {
+  <div class="pagination-letras">
+
+    @if (letras.length > 1) {
 
     @for (letra of letras; track letra) {
-      <button
-        [class.selected]="letra === letraSelecionada"
-        (click)="filtrarPorLetra(letra)">
-        {{ letra }}
-      </button>
+    <button [class.selected]="letra === letraSelecionada" (click)="filtrarPorLetra(letra)">
+      {{ letra }}
+    </button>
     }
 
-    <button
-      [class.selected]="letraSelecionada === ''"
-      (click)="filtrarPorLetra('')">
+    <button [class.selected]="letraSelecionada === ''" (click)="filtrarPorLetra('')">
       Todos
     </button>
-  }
-</div>
+    }
+  </div>
 
-    <table class="table table-striped">
-  <tbody>
-    @for (palavra of palavrasPaginadas; track palavra.id) {
+  <table class="table table-striped">
+    <tbody>
+      @for (palavra of palavrasPaginadas; track palavra.id) {
       <tr>
         <td class="td-nome-palavra">
-        <div class="td-texto">
-          {{ palavra.texto }}
+          <div class="td-texto">
+            {{ palavra.texto }}
+          </div>
+
+          @if (palavra.definicao_extra && palavra.definicao_extra.trim() !== '') {
+        <div class="td-vermais">
+          <a class="btn-vermais"
+             [style.color]="dictionary?.cor_titulo">
+            ver mais
+          </a>
         </div>
+      }
+          <div style="width:100%">
+            {{ palavra.definicao }}
 
-        <div class="td-vermais" style="width:10%; text-align:right;">
-          <button class="btn-vermais">ver mais</button>
-        </div>
+          </div>
 
-        {{ palavra.definicao }}
-
+          
         </td>
       </tr>
-    }
-  </tbody>
-</table>
+      }
+    </tbody>
+  </table>
 
 </div>

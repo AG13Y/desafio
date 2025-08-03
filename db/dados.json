@@ -10,10 +10,10 @@
     },
     {
       "nome": "Dicionário RH",
-      "cor_botao": "#000000",
-      "cor_botao_fonte": "#FFFFFF",
-      "cor_titulo": "#FFFFFF",
-      "cor_icone": "#FFFFFF",
+      "cor_botao": "#f00f0f",
+      "cor_botao_fonte": "#ae2d2d",
+      "cor_titulo": "#f00f0f",
+      "cor_icone": "#fb0909",
       "id": "6272"
     },
     {
@@ -28,9 +28,17 @@
       "nome": "bvbcvbcb",
       "cor_botao": "#8c2684",
       "cor_botao_fonte": "#FFFFFF",
-      "cor_titulo": "#4dae67",
+      "cor_titulo": "#0bed07",
       "cor_icone": "#22e01f",
       "id": "d161"
+    },
+    {
+      "id": "2ad1",
+      "nome": "AG",
+      "cor_botao": "#263D8A",
+      "cor_botao_fonte": "#FFFFFF",
+      "cor_titulo": "#263D8A",
+      "cor_icone": "#263D8A"
     }
   ],
   "dicionario_texto": [
@@ -217,11 +225,11 @@
       "dicionarioId": "6272"
     },
     {
-      "id": "4787",
       "texto": "baGA",
-      "definicao": "312",
+      "definicao": "33",
       "definicao_extra": "",
-      "dicionarioId": "d161"
+      "dicionarioId": "d161",
+      "id": "4787"
     },
     {
       "id": "3832",
@@ -262,6 +270,34 @@
       "id": "7d9d",
       "texto": "gato",
       "definicao": "ddd",
+      "definicao_extra": "",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "6104",
+      "texto": "asdsda",
+      "definicao": "2312",
+      "definicao_extra": "",
+      "dicionarioId": "2ad1"
+    },
+    {
+      "id": "9f63",
+      "texto": "sadsd",
+      "definicao": "213231",
+      "definicao_extra": "",
+      "dicionarioId": "2ad1"
+    },
+    {
+      "id": "87ad",
+      "texto": "Gato de Botas",
+      "definicao": "Filme 2",
+      "definicao_extra": "O filme &#233; bom",
+      "dicionarioId": "11d8"
+    },
+    {
+      "id": "a3b0",
+      "texto": "Gato de Botas 2",
+      "definicao": "Filme bom",
       "definicao_extra": "",
       "dicionarioId": "11d8"
     }

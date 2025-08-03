@@ -29,7 +29,7 @@ export class Home {
 
   bsModalRef?: BsModalRef;
   
-constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService) {}
 
   openModal(dictionary: any ) {
     this.bsModalRef = this.modalService.show(ModalDicionary, {

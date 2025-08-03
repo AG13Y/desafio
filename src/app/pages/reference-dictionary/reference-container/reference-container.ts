@@ -1,12 +1,14 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DicionaryService } from '../../../shared/services/dicionary.services';
 import { WordService } from '../../../shared/services/word.services';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ModalDicionary } from '../../dictionary-registration/modal-dicionary/modal-dicionary';
 
 
 @Component({
   selector: 'app-reference-container',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './reference-container.html',
   styleUrl: './reference-container.css'
 })
@@ -16,6 +18,7 @@ export class ReferenceContainer {
   dicionaryService = inject(DicionaryService);
   wordService = inject(WordService);
 
+  dictionaries = signal<any[]>([]);
   dictionary: any;
   palavras: any[] = [];
   dictionaryId: string = '';
@@ -31,9 +34,27 @@ export class ReferenceContainer {
       this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
         this.dictionary = data;
         this.getPalavras(true);
-
       });
     }
+  }
+
+  bsModalRef?: BsModalRef;
+  
+  constructor(private modalService: BsModalService) {}
+
+  openModal(dictionary: any) {
+    this.bsModalRef = this.modalService.show(ModalDicionary, {
+      initialState: {
+        dictionary,
+        onSave: () => {
+        this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
+          this.dictionary = data;
+        });
+        
+          this.getPalavras();
+        }
+      }
+  });
   }
 
   getPalavras(forceFirst: boolean = false) {
@@ -47,6 +68,13 @@ export class ReferenceContainer {
   }
 
   setupPagination(forceFirst: boolean = false) {
+
+    if (this.palavras.length < 25) {
+    this.letras = [];
+    this.letraSelecionada = '';
+    this.palavrasPaginadas = this.palavras;
+    return;
+  }
 
     this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
 
