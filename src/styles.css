@@ -7,4 +7,11 @@
   box-sizing: border-box;
 }
 
+.custom-modal-size{
+  max-width: 62.5rem ; /* ou qualquer tamanho que quiser */
+  width: auto ;
+  max-height: 90vh;
+  padding: 10px;
+}
+
 

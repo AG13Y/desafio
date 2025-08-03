@@ -5,7 +5,7 @@ import { WordService } from '../../shared/services/word.services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalDictionary } from '../dictionary-registration/components/modal-dictionary/modal-dictionary';
 import { ModalDictionaryWordViewMore } from './components/modal-dictionary-word-view-more/modal-dictionary-word-view-more';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-dictionary-view',
@@ -18,6 +18,7 @@ export class DictionaryView {
   route = inject(ActivatedRoute);
   dicionaryService = inject(DictionaryService);
   wordService = inject(WordService);
+  location = inject(Location);
 
   dictionaries = signal<any[]>([]);
   dictionary: any;
@@ -127,4 +128,7 @@ export class DictionaryView {
     }
   }
 
+  voltar() {
+    this.location.back();
+  }
 }

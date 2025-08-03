@@ -37,7 +37,7 @@
       "cor_botao": "#3c8c26",
       "cor_botao_fonte": "#d2e76a",
       "cor_titulo": "#638c26",
-      "cor_icone": "#265d8c",
+      "cor_icone": "#08680c",
       "id": "2ad1"
     }
   ],
@@ -276,7 +276,7 @@
     {
       "texto": "asdsda",
       "definicao": "2312",
-      "definicao_extra": "<ul><li>sfw<b>sfsfsfsfs</b><span>f</span></li><li><span>sfsfsfsfsfsfsfsfsf</span></li><li>sfsfsf<i>wsfsffs</i></li></ul>",
+      "definicao_extra": "<ul><li>sfw<b>sfsfsfsfs</b><span>f</span></li></ul>",
       "dicionarioId": "2ad1",
       "id": "6104"
     },

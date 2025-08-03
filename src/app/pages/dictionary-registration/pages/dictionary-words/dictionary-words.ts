@@ -4,6 +4,7 @@ import { DictionaryService } from '../../../../shared/services/dictionary.servic
 import { WordService } from '../../../../shared/services/word.services';
 import { ModalWord } from '../../components/modal-word/modal-word';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-dictionary-words',
@@ -16,9 +17,11 @@ export class DictionaryWords {
 
   dictionary: any;
   palavras: any[] = [];
+
   route = inject(ActivatedRoute);
   dicionaryService = inject(DictionaryService);
   wordService = inject(WordService);
+  location = inject(Location);
 
   letras: string[] = [];
   letraSelecionada: string = '';
@@ -80,7 +83,7 @@ export class DictionaryWords {
   }
 
   deletePalavra(id: string) {
-    const confirmDelete = window.confirm("Deseja excluir esta palavra?");
+    const confirmDelete = window.confirm("Deseja excluir está palavra?");
     if (confirmDelete) {
       this.wordService.deleteDictionaryTexts(id).subscribe(() => {
 
@@ -102,4 +105,7 @@ export class DictionaryWords {
     });
   }
 
+  voltar() {
+    this.location.back();
+  }
 }

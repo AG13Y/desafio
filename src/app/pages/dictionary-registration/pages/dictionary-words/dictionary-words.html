@@ -2,13 +2,17 @@
 <div class="container">
 <div class="cabecalho">
   <h1>{{ dictionary.nome }}</h1>
-  <span class="btn-icone">
+  <span class="btn-icone" title="Voltar" (click)="voltar()">
+      <i class="bi bi-arrow-left"></i>
+    </span>
+</div>
+
+<span class="btn-icone">
     <button class="btn-palavra" (click)="openModal(null)">
       <i class="btn-icone bi bi-plus-circle-fill" title="Adicionar"></i>
       <p>Palavra</p>
     </button>
   </span>
-</div>
 
 <table class="table table-striped">
   <tbody>
