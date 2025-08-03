@@ -3,7 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DictionaryService } from '../../shared/services/dictionary.services';
 import { WordService } from '../../shared/services/word.services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ModalDicionary } from '../dictionary-registration/components/modal-dicionary/modal-dicionary';
+import { ModalDictionary } from '../dictionary-registration/components/modal-dictionary/modal-dictionary';
 
 
 @Component({
@@ -43,7 +43,7 @@ export class DictionaryView {
   constructor(private modalService: BsModalService) { }
 
   openModal(dictionary: any) {
-    this.bsModalRef = this.modalService.show(ModalDicionary, {
+    this.bsModalRef = this.modalService.show(ModalDictionary, {
       initialState: {
         dictionary,
         onSave: () => {

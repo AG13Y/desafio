@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DictionaryView } from './dictionary-view';
 
-describe('ReferenceContainer', () => {
+describe('DictionaryView', () => {
   let component: DictionaryView;
   let fixture: ComponentFixture<DictionaryView>;
 

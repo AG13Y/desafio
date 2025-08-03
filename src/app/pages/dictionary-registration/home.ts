@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { DictionaryService } from '../../shared/services/dictionary.services';
 import { RouterLink } from '@angular/router';
-import { ModalDicionary } from './components/modal-dicionary/modal-dicionary';
+import { ModalDictionary } from './components/modal-dictionary/modal-dictionary';
 import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 
 
@@ -32,7 +32,7 @@ export class Home {
   constructor(private modalService: BsModalService) { }
 
   openModal(dictionary: any) {
-    this.bsModalRef = this.modalService.show(ModalDicionary, {
+    this.bsModalRef = this.modalService.show(ModalDictionary, {
       initialState: {
         dictionary,
         onSave: () => this.getDicionaries()

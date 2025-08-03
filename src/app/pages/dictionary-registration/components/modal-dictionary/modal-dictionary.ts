@@ -5,12 +5,12 @@ import { DictionaryService } from '../../../../shared/services/dictionary.servic
 
 
 @Component({
-  selector: 'app-modal-dicionary',
+  selector: 'app-modal-dictionary',
   imports: [FormsModule, ReactiveFormsModule],
-  templateUrl: './modal-dicionary.html',
-  styleUrl: './modal-dicionary.css'
+  templateUrl: './modal-dictionary.html',
+  styleUrl: './modal-dictionary.css'
 })
-export class ModalDicionary {
+export class ModalDictionary {
   dictionary: any;
   form!: FormGroup;
   onSave?: () => void;

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalMessage } from './modal-message';
+import { ModalDictionary } from './modal-dictionary';
 
-describe('ModalMessage', () => {
-  let component: ModalMessage;
-  let fixture: ComponentFixture<ModalMessage>;
+describe('ModalDictionary', () => {
+  let component: ModalDictionary;
+  let fixture: ComponentFixture<ModalDictionary>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ModalMessage]
+      imports: [ModalDictionary]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ModalMessage);
+    fixture = TestBed.createComponent(ModalDictionary);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
