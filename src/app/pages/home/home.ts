@@ -19,6 +19,10 @@ export class Home {
 
   dicionaryService = inject(DictionaryService);
 
+  bsModalRef?: BsModalRef;
+
+  constructor(private modalService: BsModalService) { }
+
   ngOnInit() {
     this.getDicionaries();
   }
@@ -28,10 +32,6 @@ export class Home {
       this.dictionaries.set(data);
     });
   }
-
-  bsModalRef?: BsModalRef;
-
-  constructor(private modalService: BsModalService) { }
 
   openModal(dictionary: any) {
     this.bsModalRef = this.modalService.show(ModalDictionary, {
