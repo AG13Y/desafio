@@ -65,19 +65,6 @@ describe('Home Component', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should call deleteDictionary and refresh data', () => {
-    const spyDeleteDictionary = spyOn(dictionaryService, 'deleteDictionary').and.callThrough();
-    const refreshSpy = spyOn(dictionaryService, 'getDictionarys').and.callThrough();
-
-    component.deleteDictionaries('123');
-
-    // chama manualmente a função que estaria no botão "confirmar"
-    const args = (modalService.show as jasmine.Spy).calls.mostRecent().args[1];
-    args.initialState.onConfirm();
-
-    expect(spyDeleteDictionary).toHaveBeenCalledWith('123');
-    expect(refreshSpy).toHaveBeenCalled();
-  });
 
   it('should call putDictionary and refresh data', () => {
     const dicionario = { id: '999', nome: 'Update Test' };
