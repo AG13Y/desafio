@@ -3,6 +3,7 @@ import { DictionaryService } from '../../shared/services/dictionary.services';
 import { RouterLink } from '@angular/router';
 import { ModalDictionary } from './components/modal-dictionary/modal-dictionary';
 import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
+import { ModalExcluir } from './components/modal-excluir/modal-excluir';
 
 
 
@@ -41,14 +42,17 @@ export class Home {
   }
 
   deleteDictionaries(codigo: number) {
-    const confirmDelete = window.confirm("Deseja excluir o Dicionário?");
-
-    if (confirmDelete) {
-      this.dicionaryService.deleteDictionary(codigo).subscribe(() => {
-        this.getDicionaries();
-      });
+  this.bsModalRef = this.modalService.show(ModalExcluir, {
+    initialState: {
+      message: 'Deseja excluir o Dicionário?',
+      onConfirm: () => {
+        this.dicionaryService.deleteDictionary(codigo).subscribe(() => {
+          this.getDicionaries();
+        });
+      }
     }
-  }
+  });
+}
 
   editDictionary(dicionario: any) {
     this.dicionaryService.putDictionary(dicionario.id, dicionario).subscribe(() => {

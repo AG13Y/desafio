@@ -17,14 +17,6 @@
       "id": "6272"
     },
     {
-      "nome": "Dicionário Geral",
-      "cor_botao": "#000000",
-      "cor_botao_fonte": "#FFFFFF",
-      "cor_titulo": "#FFFFFF",
-      "cor_icone": "#FFFFFF",
-      "id": "1232"
-    },
-    {
       "nome": "bvbcvbcb",
       "cor_botao": "#8c2684",
       "cor_botao_fonte": "#FFFFFF",
@@ -39,6 +31,14 @@
       "cor_titulo": "#638c26",
       "cor_icone": "#08680c",
       "id": "2ad1"
+    },
+    {
+      "id": "074f",
+      "nome": "Dicionário Geral",
+      "cor_botao": "#263D8A",
+      "cor_botao_fonte": "#FFFFFF",
+      "cor_titulo": "#263D8A",
+      "cor_icone": "#263D8A"
     }
   ],
   "dicionario_texto": [

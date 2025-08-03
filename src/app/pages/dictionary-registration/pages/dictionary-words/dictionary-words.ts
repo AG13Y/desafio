@@ -5,6 +5,8 @@ import { WordService } from '../../../../shared/services/word.services';
 import { ModalWord } from '../../components/modal-word/modal-word';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Location } from '@angular/common';
+import { ModalExcluir } from '../../components/modal-excluir/modal-excluir';
+
 
 @Component({
   selector: 'app-dictionary-words',
@@ -83,16 +85,18 @@ export class DictionaryWords {
   }
 
   deletePalavra(id: string) {
-    const confirmDelete = window.confirm("Deseja excluir está palavra?");
-    if (confirmDelete) {
-      this.wordService.deleteDictionaryTexts(id).subscribe(() => {
-
-        this.palavras = this.palavras.filter(p => p.id !== id);
-
-        this.setupPagination();
-      });
+  this.bsModalRef = this.modalService.show(ModalExcluir, {
+    initialState: {
+      message: 'Deseja excluir esta palavra?',
+      onConfirm: () => {
+        this.wordService.deleteDictionaryTexts(id).subscribe(() => {
+          this.palavras = this.palavras.filter(p => p.id !== id);
+          this.setupPagination();
+        });
+      }
     }
-  }
+  });
+}
 
   openModal(texto?: any) {
     const payload = texto || { dicionarioId: this.dictionary.id };
