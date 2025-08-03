@@ -1,17 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DicionaryService } from '../../../shared/services/dicionary.services';
-import { WordService } from '../../../shared/services/word.services';
-import { ModalWord } from '../modal-word/modal-word';
+import { DicionaryService } from '../../../../shared/services/dicionary.services';
+import { WordService } from '../../../../shared/services/word.services';
+import { ModalWord } from '../../components/modal-word/modal-word';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-dictionary-word',
+  selector: 'app-dictionary-words',
   imports: [],
-  templateUrl: './dictionary-word.html',
-  styleUrl: './dictionary-word.css'
+  templateUrl: './dictionary-words.html',
+  styleUrl: './dictionary-words.css'
 })
-export class DictionaryWord {
+export class DictionaryWords {
   bsModalRef?: BsModalRef;
 
   dictionary: any;

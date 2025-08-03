@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReferenceContainer } from './reference-container';
+import { ModalMessage } from './modal-message';
 
-describe('ReferenceContainer', () => {
-  let component: ReferenceContainer;
-  let fixture: ComponentFixture<ReferenceContainer>;
+describe('ModalMessage', () => {
+  let component: ModalMessage;
+  let fixture: ComponentFixture<ModalMessage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReferenceContainer]
+      imports: [ModalMessage]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ReferenceContainer);
+    fixture = TestBed.createComponent(ModalMessage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

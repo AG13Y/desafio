@@ -1,28 +1,27 @@
-
 <div class="cabecalho">
-    <span class="btn-icone"><i class="bi bi-pencil"></i></span>
+  <span class="btn-icone"><i class="bi bi-pencil"></i></span>
   <h1>{{texto?.id ? "Editar palavra" : "Nova palavra"}}</h1>
   <span class="btn-icone"><i class="bi bi-x-lg" (click)="closeModal()"></i></span>
 </div>
 
 <div class="body">
-    <form [formGroup]="form" (ngSubmit)="saveEdit()">
+  <form [formGroup]="form" (ngSubmit)="saveEdit()">
 
     <label for="texto">Texto</label>
     <input id="texto" formControlName="texto" class="form-control" placeholder="Palavra" />
 
     @if (form.get('texto')?.invalid && form.get('texto')?.touched) {
-      <div style="color:red; font-size:0.9rem;">
-        O texto é obrigatório.
-      </div>
+    <div style="color:red; font-size:0.9rem;">
+      O texto é obrigatório.
+    </div>
     }
     <label for="definicao">Definição</label>
     <input id="definicao" formControlName="definicao" class="form-control" placeholder="Definição" />
 
     @if (form.get('definicao')?.invalid && form.get('definicao')?.touched) {
-      <div style="color:red; font-size:0.9rem;">
-        A definição é obrigatória.
-      </div>
+    <div style="color:red; font-size:0.9rem;">
+      A definição é obrigatória.
+    </div>
     }
 
     <label for="definicao_extra">Definição extra</label>

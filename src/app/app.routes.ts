@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/dictionary-registration/home/home';
-import { ReferenceContainer } from './pages/reference-dictionary/reference-container/reference-container';
-import { DictionaryWord } from './pages/dictionary-registration/dictionary-word/dictionary-word';
+import { Home } from './pages/dictionary-registration/home';
+import { DictionaryView } from './pages/dictionary-view/dictionary-view';
+import { DictionaryWords } from './pages/dictionary-registration/pages/dictionary-words/dictionary-words';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
 
     {path: 'home', component: Home},
 
-    {path: 'reference-dictionary/:id', component: ReferenceContainer},
+    {path: 'dictionary-view/:id', component: DictionaryView},
 
-    {path: 'dictionary-word/:id', component: DictionaryWord}
+    {path: 'dictionary-words/:id', component: DictionaryWords}
 ];

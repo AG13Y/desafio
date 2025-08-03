@@ -1,0 +1,49 @@
+<div class="cabecalho">
+    <span class="btn-icone"><i class="bi bi-pencil"></i></span>
+    <h1>Dicionário</h1>
+
+    <div class="space">
+
+        <span class="btn-icone"><i class="bi bi-x-lg" (click)="closeModal()"></i></span>
+
+    </div>
+</div>
+
+<div class="body">
+    <div class="body">
+        <form [formGroup]="form" (ngSubmit)="saveEdit()">
+            <label for="nome">Título</label>
+            <input id="nome" formControlName="nome" class="form-control" placeholder="Nome do dicionário" />
+
+            @if (form.get('nome')?.invalid && form.get('nome')?.touched) {
+            <div style="color:red; font-size:0.9rem;">
+                O nome é obrigatório.
+            </div>
+            }
+
+            <div class="form-color-group form-color-row">
+                <label for="cor_botao">Cor de fundo do botão</label>
+                <input type="color" id="cor_botao" formControlName="cor_botao" />
+            </div>
+
+            <div class="form-color-group form-color-row">
+                <label for="cor_botao_fonte">Cor da fonte do botão</label>
+                <input type="color" id="cor_botao_fonte" formControlName="cor_botao_fonte" />
+            </div>
+
+            <div class="form-color-group form-color-row">
+                <label for="cor_titulo">Cor da fonte para títulos</label>
+                <input type="color" id="cor_titulo" formControlName="cor_titulo" />
+            </div>
+            
+            <div class="form-color-group form-color-row">
+                <label for="cor_icone">Cor do ícone</label>
+                <input type="color" id="cor_icone" formControlName="cor_icone" />
+            </div>
+
+            <span class="btn-save">
+                <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Salvar</button>
+            </span>
+        </form>
+
+    </div>

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { WordService } from '../../../shared/services/word.services';
+import { WordService } from '../../../../shared/services/word.services';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularEditorConfig, AngularEditorModule } from '@kolkov/angular-editor';
@@ -41,13 +41,13 @@ export class ModalWord {
     if (this.form.invalid) return;
 
     if (this.texto?.id) {
-      
+
       this.wordService.putDictionaryTexts(this.texto.id, this.form.value).subscribe(() => {
         if (this.onSave) this.onSave();
         this.closeModal();
       });
     } else {
-      
+
       this.wordService.postDictionaryTexts(this.form.value).subscribe(() => {
         if (this.onSave) this.onSave();
         this.closeModal();
@@ -55,17 +55,17 @@ export class ModalWord {
     }
   }
 
- editorConfig: AngularEditorConfig = {
-  editable: true,
-  spellcheck: true,
-  height: '10rem',
-  minHeight: '5rem',
-  placeholder: 'Digite a definição extra...',
-  translate: 'no',
-  toolbarPosition: 'top',
-  defaultParagraphSeparator: 'p',
-  toolbarHiddenButtons: [
-    ['insertImage', 'insertVideo']
-  ]
-};
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '10rem',
+    minHeight: '5rem',
+    placeholder: 'Digite a definição extra...',
+    translate: 'no',
+    toolbarPosition: 'top',
+    defaultParagraphSeparator: 'p',
+    toolbarHiddenButtons: [
+      ['insertImage', 'insertVideo']
+    ]
+  };
 }

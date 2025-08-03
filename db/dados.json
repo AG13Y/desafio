@@ -33,12 +33,12 @@
       "id": "d161"
     },
     {
-      "id": "2ad1",
-      "nome": "AG",
-      "cor_botao": "#263D8A",
-      "cor_botao_fonte": "#FFFFFF",
-      "cor_titulo": "#263D8A",
-      "cor_icone": "#263D8A"
+      "nome": "AG é mais",
+      "cor_botao": "#3c8c26",
+      "cor_botao_fonte": "#d2e76a",
+      "cor_titulo": "#638c26",
+      "cor_icone": "#265d8c",
+      "id": "2ad1"
     }
   ],
   "dicionario_texto": [
@@ -274,11 +274,11 @@
       "dicionarioId": "11d8"
     },
     {
-      "id": "6104",
       "texto": "asdsda",
       "definicao": "2312",
-      "definicao_extra": "",
-      "dicionarioId": "2ad1"
+      "definicao_extra": "<ul><li>sfw<b>sfsfsfsfs</b><span>f</span></li><li><span>sfsfsfsfsfsfsfsfsf</span></li><li>sfsfsf<i>wsfsffs</i></li></ul>",
+      "dicionarioId": "2ad1",
+      "id": "6104"
     },
     {
       "id": "9f63",

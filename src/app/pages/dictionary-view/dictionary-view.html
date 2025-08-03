@@ -5,7 +5,7 @@
       {{ dictionary?.nome }}
     </h1>
     <span class="btn-icone" title="Palavras">
-      <a [routerLink]="['/dictionary-word', dictionary.id]" [style.color]="dictionary.cor_icone">
+      <a [routerLink]="['/dictionary-words', dictionary.id]" [style.color]="dictionary.cor_icone">
         <i class="bi bi-alphabet"></i>
       </a>
     </span>
@@ -43,19 +43,18 @@
           </div>
 
           @if (palavra.definicao_extra && palavra.definicao_extra.trim() !== '') {
-        <div class="td-vermais">
-          <a class="btn-vermais"
-             [style.color]="dictionary?.cor_titulo">
-            ver mais
-          </a>
-        </div>
-      }
+          <div class="td-vermais">
+            <a class="btn-vermais" [style.color]="dictionary?.cor_titulo">
+              ver mais
+            </a>
+          </div>
+          }
           <div style="width:100%">
             {{ palavra.definicao }}
 
           </div>
 
-          
+
         </td>
       </tr>
       }

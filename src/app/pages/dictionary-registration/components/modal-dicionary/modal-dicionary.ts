@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { DicionaryService } from '../../../shared/services/dicionary.services';
+import { DicionaryService } from '../../../../shared/services/dicionary.services';
 
 
 @Component({

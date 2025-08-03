@@ -1,18 +1,18 @@
 import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DicionaryService } from '../../../shared/services/dicionary.services';
-import { WordService } from '../../../shared/services/word.services';
+import { DicionaryService } from '../../shared/services/dicionary.services';
+import { WordService } from '../../shared/services/word.services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ModalDicionary } from '../../dictionary-registration/modal-dicionary/modal-dicionary';
+import { ModalDicionary } from '../dictionary-registration/components/modal-dicionary/modal-dicionary';
 
 
 @Component({
-  selector: 'app-reference-container',
+  selector: 'app-dictionary-view',
   imports: [RouterLink],
-  templateUrl: './reference-container.html',
-  styleUrl: './reference-container.css'
+  templateUrl: './dictionary-view.html',
+  styleUrl: './dictionary-view.css'
 })
-export class ReferenceContainer {
+export class DictionaryView {
 
   route = inject(ActivatedRoute);
   dicionaryService = inject(DicionaryService);
@@ -30,7 +30,7 @@ export class ReferenceContainer {
   ngOnInit() {
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));
 
-     if (this.dictionaryId) {
+    if (this.dictionaryId) {
       this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
         this.dictionary = data;
         this.getPalavras(true);
@@ -39,22 +39,22 @@ export class ReferenceContainer {
   }
 
   bsModalRef?: BsModalRef;
-  
-  constructor(private modalService: BsModalService) {}
+
+  constructor(private modalService: BsModalService) { }
 
   openModal(dictionary: any) {
     this.bsModalRef = this.modalService.show(ModalDicionary, {
       initialState: {
         dictionary,
         onSave: () => {
-        this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
-          this.dictionary = data;
-        });
-        
+          this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
+            this.dictionary = data;
+          });
+
           this.getPalavras();
         }
       }
-  });
+    });
   }
 
   getPalavras(forceFirst: boolean = false) {
@@ -70,11 +70,11 @@ export class ReferenceContainer {
   setupPagination(forceFirst: boolean = false) {
 
     if (this.palavras.length < 25) {
-    this.letras = [];
-    this.letraSelecionada = '';
-    this.palavrasPaginadas = this.palavras;
-    return;
-  }
+      this.letras = [];
+      this.letraSelecionada = '';
+      this.palavrasPaginadas = this.palavras;
+      return;
+    }
 
     this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
 
@@ -91,7 +91,7 @@ export class ReferenceContainer {
 
       this.letraSelecionada = this.letras[0];
       this.filtrarPorLetra(this.letraSelecionada);
-      
+
     }
   }
 
@@ -105,15 +105,15 @@ export class ReferenceContainer {
   }
 
   deletePalavra(id: string) {
-      const confirmDelete = window.confirm("Deseja excluir esta palavra?");
-      if (confirmDelete) {
-        this.wordService.deleteDictionaryTexts(id).subscribe(() => {
-  
-          this.palavras = this.palavras.filter(p => p.id !== id);
-  
-          this.setupPagination();
-        });
-      }
+    const confirmDelete = window.confirm("Deseja excluir esta palavra?");
+    if (confirmDelete) {
+      this.wordService.deleteDictionaryTexts(id).subscribe(() => {
+
+        this.palavras = this.palavras.filter(p => p.id !== id);
+
+        this.setupPagination();
+      });
     }
-  
+  }
+
 }
