@@ -6,6 +6,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalDictionary } from '../dictionary-registration/components/modal-dictionary/modal-dictionary';
 import { ModalDictionaryWordViewMore } from './components/modal-dictionary-word-view-more/modal-dictionary-word-view-more';
 import { Location } from '@angular/common';
+import { IDictionary } from '../../shared/interfaces/dictionary.interfaces';
+import { IDictionaryWord } from '../../shared/interfaces/dictionary-word.interface';
 
 @Component({
   selector: 'app-dictionary-view',
@@ -20,14 +22,14 @@ export class DictionaryView {
   wordService = inject(WordService);
   location = inject(Location);
 
-  dictionaries = signal<any[]>([]);
-  dictionary: any;
-  palavras: any[] = [];
+  dictionaries = signal<IDictionary[]>([]);
+  dictionary: IDictionary | null = null;
+  palavras: IDictionaryWord[] = [];
   dictionaryId: string = '';
 
   letras: string[] = [];
   letraSelecionada: string = '';
-  palavrasPaginadas: any[] = [];
+  palavrasPaginadas: IDictionaryWord[] = [];
 
   ngOnInit() {
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));

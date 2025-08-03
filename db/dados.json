@@ -17,17 +17,9 @@
       "id": "6272"
     },
     {
-      "nome": "bvbcvbcb",
-      "cor_botao": "#8c2684",
-      "cor_botao_fonte": "#FFFFFF",
-      "cor_titulo": "#0bed07",
-      "cor_icone": "#22e01f",
-      "id": "d161"
-    },
-    {
       "nome": "AG é mais",
-      "cor_botao": "#3c8c26",
-      "cor_botao_fonte": "#d2e76a",
+      "cor_botao": "#30322f",
+      "cor_botao_fonte": "#f5f5f5",
       "cor_titulo": "#638c26",
       "cor_icone": "#08680c",
       "id": "2ad1"
@@ -228,22 +220,8 @@
       "texto": "baGA",
       "definicao": "33",
       "definicao_extra": "",
-      "dicionarioId": "d161",
+      "dicionarioId": null,
       "id": "4787"
-    },
-    {
-      "id": "3832",
-      "texto": "hAGA",
-      "definicao": "321312",
-      "definicao_extra": "",
-      "dicionarioId": "d161"
-    },
-    {
-      "id": "5ce8",
-      "texto": "bebew",
-      "definicao": "2323",
-      "definicao_extra": "",
-      "dicionarioId": "d161"
     },
     {
       "id": "cf3a",
@@ -307,6 +285,13 @@
       "definicao": "Lorens",
       "definicao_extra": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nibh bibendum arcu blandit volutpat in in sem. Etiam venenatis luctus justo,</p><p>nec ultricies ligula feugiat sit amet. Duis accumsan varius velit eu dignissim. Phasellus dignissim sagittis faucibus. Phasellus euismod orci eget</p><p>magna malesuada, porttitor semper enim mattis. Ut ultricies dui eu fermentum volutpat. Praesent non eros at mi tristique ullamcorper eget vel</p><p>eros. Integer commodo ultrices tincidunt. Mauris viverra pulvinar massa sit amet tristique. In nisl ligula, eleifend non molestie pellentesque,</p><p>vestibulum in arcu. Phasellus tortor nulla, mollis vitae justo non, venenatis consequat justo. Suspendisse ac volutpat dui. Sed luctus laoreet</p><p>vehicula. Duis malesuada finibus dictum.</p><p>Mauris aliquet urna in quam sagittis tincidunt. Donec viverra pulvinar ligula ut tristique. Etiam faucibus massa id tincidunt vulputate. Nam id</p><p>suscipit ipsum, eu mollis erat. Mauris et facilisis eros, in euismod velit. Nullam tortor erat, facilisis sit amet egestas sit amet, efficitur eget</p><p>magna. Vivamus blandit nisi eu ligula faucibus porttitor. Cras sagittis nunc ut ligula mattis pharetra.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nibh bibendum arcu blandit volutpat in in sem. Etiam venenatis luctus justo,</p><p>nec ultricies ligula feugiat sit amet. Duis accumsan varius velit eu dignissim. Phasellus dignissim sagittis faucibus. Phasellus euismod orci eget</p><p>magna malesuada, porttitor semper enim mattis. Ut ultricies dui eu fermentum volutpat. Praesent non eros at mi tristique ullamcorper eget vel</p><p>eros. Integer commodo ultrices tincidunt. Mauris viverra pulvinar massa sit amet tristique. In nisl ligula, eleifend non molestie pellentesque,</p><p>vestibulum in arcu. Phasellus tortor nulla, mollis vitae justo non, venenatis consequat justo. Suspendisse ac volutpat dui. Sed luctus laoreet</p><p>vehicula. Duis malesuada finibus dictum.</p><p>Mauris aliquet urna in quam sagittis tincidunt. Donec viverra pulvinar ligula ut tristique. Etiam faucibus massa id tincidunt vulputate. Nam id</p><p>suscipit ipsum, eu mollis erat. Mauris et facilisis eros, in euismod velit. Nullam tortor erat, facilisis sit amet egestas sit amet, efficitur eget</p><p>magna. Vivamus blandit nisi eu ligula faucibus porttitor. Cras sagittis nunc ut ligula mattis pharetra.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nibh bibendum arcu blandit volutpat in in sem. Etiam venenatis luctus justo,</p><p>nec ultricies ligula feugiat sit amet. Duis accumsan varius velit eu dignissim. Phasellus dignissim sagittis faucibus. Phasellus euismod orci eget</p><p>magna malesuada, porttitor semper enim mattis. Ut ultricies dui eu fermentum volutpat. Praesent non eros at mi tristique ullamcorper eget vel</p><p>eros. Integer commodo ultrices tincidunt. Mauris viverra pulvinar massa sit amet tristique. In nisl ligula, eleifend non molestie pellentesque,</p><p>vestibulum in arcu. Phasellus tortor nulla, mollis vitae justo non, venenatis consequat justo. Suspendisse ac volutpat dui. Sed luctus laoreet</p><p>vehicula. Duis malesuada finibus dictum.</p><p>Mauris aliquet urna in quam sagittis tincidunt. Donec viverra pulvinar ligula ut tristique. Etiam faucibus massa id tincidunt vulputate. Nam id</p><p>suscipit ipsum, eu mollis erat. Mauris et facilisis eros, in euismod velit. Nullam tortor erat, facilisis sit amet egestas sit amet, efficitur eget</p><p>magna. Vivamus blandit nisi eu ligula faucibus porttitor. Cras sagittis nunc ut ligula mattis pharetra.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nibh bibendum arcu blandit volutpat in in sem. Etiam venenatis luctus justo,</p><p>nec ultricies ligula feugiat sit amet. Duis accumsan varius velit eu dignissim. Phasellus dignissim sagittis faucibus. Phasellus euismod orci eget</p>",
       "dicionarioId": "2ad1"
+    },
+    {
+      "id": "ef3b",
+      "texto": "sgsdgf",
+      "definicao": "dgdg",
+      "definicao_extra": "dgadgafgazgsfgsfg",
+      "dicionarioId": null
     }
   ]
 }

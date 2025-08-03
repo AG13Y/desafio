@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DictionaryService } from '../../../../shared/services/dictionary.services';
+import { IDictionary } from '../../../../shared/interfaces/dictionary.interfaces';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { DictionaryService } from '../../../../shared/services/dictionary.servic
   styleUrl: './modal-dictionary.css'
 })
 export class ModalDictionary {
-  dictionary: any;
+  dictionary: IDictionary | null = null;
   form!: FormGroup;
   onSave?: () => void;
 
@@ -46,7 +47,9 @@ export class ModalDictionary {
 
         this.closeModal();
       });
+
     } else {
+      
       this.dictionaryService.postDictionary(this.form.value).subscribe(() => {
 
         if (this.onSave) this.onSave();

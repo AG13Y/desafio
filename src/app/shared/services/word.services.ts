@@ -18,7 +18,7 @@ export class WordService {
     return this.http.post(this.apiUrl, word);
   }
 
-  putDictionaryTexts(id: number, word: any): Observable<any> {
+  putDictionaryTexts(id: string, word: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, word);
   }
 

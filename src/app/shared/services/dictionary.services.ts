@@ -20,7 +20,7 @@ export class DictionaryService {
     return this.http.post(this.apiUrl, dictionary);
   }
 
-  putDictionary(id: number, dictionary: any): Observable<any> {
+  putDictionary(id: string, dictionary: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, dictionary);
   }
 
@@ -28,7 +28,7 @@ export class DictionaryService {
     return this.http.get<any>(`${this.apiUrl}?_sort=nome`);
   }
   
-  deleteDictionary(id: number): Observable<any> {
+  deleteDictionary(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

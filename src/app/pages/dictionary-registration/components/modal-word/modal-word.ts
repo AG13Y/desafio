@@ -4,6 +4,7 @@ import { WordService } from '../../../../shared/services/word.services';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularEditorConfig, AngularEditorModule } from '@kolkov/angular-editor';
+import { IDictionaryWord } from '../../../../shared/interfaces/dictionary-word.interface';
 
 
 
@@ -15,7 +16,7 @@ import { AngularEditorConfig, AngularEditorModule } from '@kolkov/angular-editor
   styleUrl: './modal-word.css'
 })
 export class ModalWord {
-  texto: any;
+  texto: IDictionaryWord | null = null;
   form!: FormGroup;
   onSave?: () => void;
 

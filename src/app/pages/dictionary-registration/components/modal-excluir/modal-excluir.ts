@@ -12,7 +12,7 @@ export class ModalExcluir {
   onConfirm?: () => void;
   onCancel?: () => void;
 
-  constructor(public bsModalRef: BsModalRef) {}
+  constructor(public bsModalRef: BsModalRef) { }
 
   confirm() {
     if (this.onConfirm) this.onConfirm();
@@ -23,6 +23,6 @@ export class ModalExcluir {
     if (this.onCancel) this.onCancel();
     this.bsModalRef.hide();
   }
-  
+
 
 }

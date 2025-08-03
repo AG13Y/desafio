@@ -6,6 +6,8 @@ import { ModalWord } from '../../components/modal-word/modal-word';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Location } from '@angular/common';
 import { ModalExcluir } from '../../components/modal-excluir/modal-excluir';
+import { IDictionary } from '../../../../shared/interfaces/dictionary.interfaces';
+import { IDictionaryWord } from '../../../../shared/interfaces/dictionary-word.interface';
 
 
 @Component({
@@ -17,8 +19,8 @@ import { ModalExcluir } from '../../components/modal-excluir/modal-excluir';
 export class DictionaryWords {
   bsModalRef?: BsModalRef;
 
-  dictionary: any;
-  palavras: any[] = [];
+  dictionary: IDictionary | null = null;
+  palavras: IDictionaryWord[] = [];
 
   route = inject(ActivatedRoute);
   dicionaryService = inject(DictionaryService);
@@ -27,7 +29,7 @@ export class DictionaryWords {
 
   letras: string[] = [];
   letraSelecionada: string = '';
-  palavrasPaginadas: any[] = [];
+  palavrasPaginadas: IDictionaryWord[] = [];
 
   constructor(private modalService: BsModalService) { }
 
@@ -35,6 +37,7 @@ export class DictionaryWords {
 
   ngOnInit() {
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));
+    
     if (this.dictionaryId) {
       this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
         this.dictionary = data;
@@ -77,9 +80,13 @@ export class DictionaryWords {
 
   filtrarPorLetra(letra: string) {
     this.letraSelecionada = letra;
+
     if (letra === '') {
+
       this.palavrasPaginadas = this.palavras;
+
     } else {
+
       this.palavrasPaginadas = this.palavras.filter(p => p.texto[0].toUpperCase() === letra);
     }
   }
@@ -99,7 +106,8 @@ export class DictionaryWords {
 }
 
   openModal(texto?: any) {
-    const payload = texto || { dicionarioId: this.dictionary.id };
+    const payload = texto || { dicionarioId: this.dictionary?.id };
+
     this.bsModalRef = this.modalService.show(ModalWord, {
       initialState: {
         texto: payload,

@@ -5,16 +5,16 @@
       {{ dictionary?.nome }}
     </h1>
     <span class="btn-icone" title="Palavras">
-      <a [routerLink]="['/dictionary-words', dictionary.id]" [style.color]="dictionary.cor_icone">
+      <a [routerLink]="['/dictionary-words', dictionary?.id]" [style.color]="dictionary?.cor_icone">
         <i class="bi bi-alphabet"></i>
       </a>
     </span>
 
-    <span class="btn-icone" title="Configurar" [style.color]="dictionary.cor_icone" (click)="openModal(dictionary)">
+    <span class="btn-icone" title="Configurar" [style.color]="dictionary?.cor_icone" (click)="openModal(dictionary)">
       <i class="bi bi-gear-fill"></i>
     </span>
 
-    <span class="btn-icone" title="Voltar" [style.color]="dictionary.cor_icone" (click)="voltar()">
+    <span class="btn-icone" title="Voltar" [style.color]="dictionary?.cor_icone" (click)="voltar()">
       <i class="bi bi-arrow-left"></i>
     </span>
     

@@ -3,6 +3,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { WordService } from '../../../../shared/services/word.services';
 import { ActivatedRoute } from '@angular/router';
 import { DictionaryService } from '../../../../shared/services/dictionary.services';
+import { IDictionaryWord } from '../../../../shared/interfaces/dictionary-word.interface';
+import { IDictionary } from '../../../../shared/interfaces/dictionary.interfaces';
 
 @Component({
   selector: 'app-modal-dictionary-word-view-more',
@@ -11,8 +13,8 @@ import { DictionaryService } from '../../../../shared/services/dictionary.servic
   styleUrl: './modal-dictionary-word-view-more.css'
 })
 export class ModalDictionaryWordViewMore {
-  palavra: any;
-  dictionary: any;
+  palavra: IDictionaryWord | null = null;
+  dictionary: IDictionary | null = null;
   dictionaryId: string = '';
 
   route = inject(ActivatedRoute);
@@ -20,7 +22,7 @@ export class ModalDictionaryWordViewMore {
   dicionaryService = inject(DictionaryService);
 
 
-  palavras: any[] = [];
+  palavras: IDictionaryWord[] = [];
 
   constructor(public bsModalRef: BsModalRef) { };
 
