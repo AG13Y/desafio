@@ -44,7 +44,7 @@
 
           @if (palavra.definicao_extra && palavra.definicao_extra.trim() !== '') {
           <div class="td-vermais">
-            <a class="btn-vermais" [style.color]="dictionary?.cor_titulo">
+            <a class="btn-vermais" [style.color]="dictionary?.cor_titulo" (click)="openModalViewMore(palavra)">
               ver mais
             </a>
           </div>

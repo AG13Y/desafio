@@ -4,6 +4,7 @@ import { DictionaryService } from '../../shared/services/dictionary.services';
 import { WordService } from '../../shared/services/word.services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalDictionary } from '../dictionary-registration/components/modal-dictionary/modal-dictionary';
+import { ModalDictionaryWordViewMore } from './components/modal-dictionary-word-view-more/modal-dictionary-word-view-more';
 
 
 @Component({
@@ -56,6 +57,16 @@ export class DictionaryView {
       }
     });
   }
+
+  openModalViewMore(palavra: any) {
+  this.bsModalRef = this.modalService.show(ModalDictionaryWordViewMore, {
+    initialState: {
+      palavra,
+      dictionary: this.dictionary
+    },
+    class: 'custom-modal-size'
+  });
+}
 
   getPalavras(forceFirst: boolean = false) {
 
