@@ -22,7 +22,6 @@ export class DictionaryView {
   wordService = inject(WordService);
   location = inject(Location);
 
-  dictionaries = signal<IDictionary[]>([]);
   dictionary: IDictionary | null = null;
   palavras: IDictionaryWord[] = [];
   dictionaryId: string = '';
@@ -91,32 +90,27 @@ export class DictionaryView {
 
   setupPagination(forceFirst: boolean = false) {
 
-    if (this.palavras.length < 25) {
+  if (this.palavras.length < 25) {
 
-      this.letras = [];
+    this.letras = [];
 
-      this.letraSelecionada = '';
+    this.letraSelecionada = '';
 
-      this.palavrasPaginadas = this.palavras;
-      return;
-    }
-
-    this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
-
-    if (this.letraSelecionada) {
-
-      this.filtrarPorLetra(this.letraSelecionada);
-
-    } else if (this.palavras.length < 25) {
-
-      this.palavrasPaginadas = this.palavras;
-
-    } else if (forceFirst) {
-
-      this.letraSelecionada = this.letras[0];
-      this.filtrarPorLetra(this.letraSelecionada);
-    }
+    this.palavrasPaginadas = this.palavras;
+    return;
   }
+
+  this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
+
+  if (this.letraSelecionada) {
+    this.filtrarPorLetra(this.letraSelecionada);
+
+  } else if (forceFirst) {
+    this.letraSelecionada = this.letras[0];
+
+    this.filtrarPorLetra(this.letraSelecionada);
+  }
+}
 
   filtrarPorLetra(letra: string) {
 

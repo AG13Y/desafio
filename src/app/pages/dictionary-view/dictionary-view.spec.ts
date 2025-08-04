@@ -90,7 +90,7 @@ describe('DictionaryView', () => {
   });
 
   it('Deveria abrir o modal de ver mais com os dados corretos', () => {
-
+    
     const mockWord = { id: "w1", texto: "Palavra", definicao: "Definição", definicao_extra: "Extra", dicionarioId: "1" };
     
     const spy = spyOn(modalService, 'show').and.callThrough();
