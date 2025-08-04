@@ -15,19 +15,18 @@ import { IDictionary } from '../../shared/interfaces/dictionary.interfaces';
   styleUrl: './home.css'
 })
 export class Home {
-  dictionaries = signal<IDictionary[]>([]);
 
+  dictionaries = signal<IDictionary[]>([]);
   dicionaryService = inject(DictionaryService);
 
   bsModalRef?: BsModalRef;
-
   constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
     this.getDicionaries();
   }
 
-  getDicionaries() {
+  getDicionaries() {  
     this.dicionaryService.getDictionarys().subscribe(data => {
       this.dictionaries.set(data);
     });
@@ -42,14 +41,14 @@ export class Home {
     });
   }
 
-  deleteDictionaries(codigo: string | null) {
-    if (!codigo) return;
-    
+  deleteDictionaries(dictionary: IDictionary | null) {
+    if (!dictionary) return;
+
     this.bsModalRef = this.modalService.show(ModalExcluir, {
       initialState: {
         message: 'Deseja excluir o Dicionário?',
         onConfirm: () => {
-          this.dicionaryService.deleteDictionary(codigo).subscribe(() => {
+          this.dicionaryService.deleteDictionary(dictionary.id).subscribe(() => {
             this.getDicionaries();
           });
         }

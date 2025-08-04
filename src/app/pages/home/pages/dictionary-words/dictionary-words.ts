@@ -17,10 +17,12 @@ import { IDictionaryWord } from '../../../../shared/interfaces/dictionary-word.i
   styleUrl: './dictionary-words.css'
 })
 export class DictionaryWords {
+  
   bsModalRef?: BsModalRef;
 
   dictionary: IDictionary | null = null;
   palavras: IDictionaryWord[] = [];
+  dictionaryId: string = '';
 
   route = inject(ActivatedRoute);
   dicionaryService = inject(DictionaryService);
@@ -32,8 +34,6 @@ export class DictionaryWords {
   palavrasPaginadas: IDictionaryWord[] = [];
 
   constructor(private modalService: BsModalService) { }
-
-  dictionaryId: string = '';
 
   ngOnInit() {
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));

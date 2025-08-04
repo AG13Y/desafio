@@ -20,6 +20,7 @@ class MockDictionaryService {
 
 class MockBsModalService {
   show() {
+    
     return {
       content: {},
     } as BsModalRef;
@@ -27,13 +28,17 @@ class MockBsModalService {
 }
 
 describe('Home Component', () => {
+  
   let component: Home;
+
   let modalService: MockBsModalService;
+
   let dictionaryService: MockDictionaryService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Home],
+
       providers: [
         { provide: DictionaryService, useClass: MockDictionaryService },
         { provide: BsModalService, useClass: MockBsModalService },
@@ -42,21 +47,23 @@ describe('Home Component', () => {
     }).compileComponents();
 
     const fixture = TestBed.createComponent(Home);
+
     component = fixture.componentInstance;
+
     modalService = TestBed.inject(BsModalService) as any;
     dictionaryService = TestBed.inject(DictionaryService) as any;
   });
 
-  it('should create', () => {
+  it('Deveria criar o componente', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should fetch dictionaries on getDicionaries()', () => {
+  it('Deveria buscar dicionários ao chamar getDicionaries()', () => {
     component.getDicionaries();
     expect(component.dictionaries()[0].id).toEqual('1');
   });
 
-  it('should open the modal with correct data', () => {
+  it('Deveria abrir o modal com os dados corretos', () => {
     const mockDict = { id: 2, nome: 'Teste' };
     const spy = spyOn(modalService, 'show').and.callThrough();
 
@@ -66,9 +73,11 @@ describe('Home Component', () => {
   });
 
 
-  it('should call putDictionary and refresh data', () => {
+  it('Deveria chamar putDictionary e atualizar os dados', () => {
     const dicionario = { id: '999', nome: 'Update Test' };
+
     const putSpy = spyOn(dictionaryService, 'putDictionary').and.callThrough();
+
     const refreshSpy = spyOn(dictionaryService, 'getDictionarys').and.callThrough();
 
     component.editDictionary(dicionario);
@@ -76,5 +85,5 @@ describe('Home Component', () => {
     expect(putSpy).toHaveBeenCalledWith('999', dicionario);
     expect(refreshSpy).toHaveBeenCalled();
   });
-  
+
 });

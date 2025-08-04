@@ -1,60 +1,69 @@
 # Desafio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 20.1.3.
 
-## Development server
+## Sobre
 
-To start a local development server, run:
+Aplicação de dicionário com cadastro, edição, exclusão e visualização de palavras, utilizando Angular e API mock via json-server.
+
+## Como rodar o projeto
+
+### 1. Instale as dependências
+
+```bash
+npm install
+```
+
+### 2. Inicie o servidor de desenvolvimento Angular
 
 ```bash
 ng serve
+```
+
+Acesse [http://localhost:4200](http://localhost:4200) no navegador.
+
+### 3. Inicie o servidor da API mock (json-server)
+
+```bash
 json-server --watch db/dados.json
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A API estará disponível em [http://localhost:3000](http://localhost:3000).
 
-## Code scaffolding
+## Testes unitários
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para executar os testes unitários com Karma, use:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Estrutura do projeto
 
-For end-to-end (e2e) testing, run:
+- `src/app/pages/` - Páginas principais da aplicação
+- `src/app/shared/` - Serviços e interfaces compartilhados
+- `db/dados.json` - Banco de dados mock para o json-server
+
+## Gerar novos componentes
 
 ```bash
-ng e2e
+ng generate component nome-do-componente
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Build para produção
 
-## Additional Resources
+```bash
+ng build
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Os arquivos finais estarão em `dist/`.
+
+## Recursos adicionais
+
+- [Documentação Angular CLI](https://angular.dev/tools/cli)
+- [Documentação json-server](https://github.com/typicode/json-server)
+
+---
+
+**Dica:**  
+Sempre inicie o `ng serve` e o `json-server` juntos para garantir que a aplicação e a API estejam disponíveis.
