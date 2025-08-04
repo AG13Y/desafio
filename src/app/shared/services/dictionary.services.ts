@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DictionaryService {
+  
   private apiUrl = 'http://localhost:3000/dicionario';
 
   private http = inject(HttpClient);

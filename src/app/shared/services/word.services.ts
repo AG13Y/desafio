@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WordService {
+  
   private http = inject(HttpClient);
 
   private apiUrl = 'http://localhost:3000/dicionario_texto';
