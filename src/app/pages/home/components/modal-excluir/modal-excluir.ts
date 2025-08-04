@@ -9,7 +9,9 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class ModalExcluir {
   message: string = '';
+
   onConfirm?: () => void;
+  
   onCancel?: () => void;
 
   constructor(public bsModalRef: BsModalRef) { }

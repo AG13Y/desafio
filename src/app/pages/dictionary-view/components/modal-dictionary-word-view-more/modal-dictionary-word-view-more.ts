@@ -30,7 +30,9 @@ export class ModalDictionaryWordViewMore {
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));
 
     if (this.dictionaryId) {
+
       this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
+
         this.dictionary = data;
         this.getPalavras(true);
       });
@@ -44,6 +46,7 @@ export class ModalDictionaryWordViewMore {
   getPalavras(forceFirst: boolean = false) {
 
     this.wordService.getDictionaryTexts(this.dictionaryId).subscribe(textos => {
+      
       let palavrasFiltradas = textos.filter(texto => texto.dicionarioId === this.dictionaryId);
 
       this.palavras = palavrasFiltradas;

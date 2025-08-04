@@ -19,16 +19,13 @@
       <tr>
         <th><a [routerLink]="['/dictionary-view', dictionary?.id]">{{ dictionary?.nome }}</a></th>
 
-        <td class="btn-icone" title="Visualizar"><a [routerLink]="['/dictionary-view', dictionary?.id]"><i
-              class="bi bi-search"></i></a></td>
+        <td class="btn-icone" title="Visualizar"><a [routerLink]="['/dictionary-view', dictionary?.id]"><i class="bi bi-search"></i></a></td>
 
-        <td class="btn-icone" title="Palavras"><a [routerLink]="['/dictionary-words', dictionary?.id]"><i
-              class="bi bi-alphabet"></i></a></td>
+        <td class="btn-icone" title="Palavras"><a [routerLink]="['/dictionary-words', dictionary?.id]"><i class="bi bi-alphabet"></i></a></td>
 
         <td class="btn-icone" title="Configurar" (click)="openModal(dictionary)"><i class="bi bi-gear-fill"></i></td>
 
-        <td class="btn-icone" title="Excluir" (click)="deleteDictionaries(dictionary)"><i
-            class="bi bi-x-lg"></i></td>
+        <td class="btn-icone" title="Excluir" (click)="deleteDictionaries(dictionary)"><i class="bi bi-x-lg"></i></td>
       </tr>
       }
 

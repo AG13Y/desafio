@@ -36,10 +36,12 @@ export class DictionaryWords {
   constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
+
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));
-    
     if (this.dictionaryId) {
+
       this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
+
         this.dictionary = data;
         this.getPalavras(true);
 
@@ -50,9 +52,11 @@ export class DictionaryWords {
   getPalavras(forceFirst: boolean = false) {
 
     this.wordService.getDictionaryTexts(this.dictionaryId).subscribe(textos => {
+
       let palavrasFiltradas = textos.filter(texto => texto.dicionarioId === this.dictionaryId);
 
       this.palavras = palavrasFiltradas;
+
       this.setupPagination(forceFirst);
     });
   }
@@ -60,8 +64,6 @@ export class DictionaryWords {
   setupPagination(forceFirst: boolean = false) {
 
     this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
-
-
     if (this.letraSelecionada) {
 
       this.filtrarPorLetra(this.letraSelecionada);
@@ -79,6 +81,7 @@ export class DictionaryWords {
   }
 
   filtrarPorLetra(letra: string) {
+
     this.letraSelecionada = letra;
 
     if (letra === '') {
@@ -92,6 +95,7 @@ export class DictionaryWords {
   }
 
   deletePalavra(id: string) {
+
   this.bsModalRef = this.modalService.show(ModalExcluir, {
     initialState: {
       message: 'Deseja excluir esta palavra?',

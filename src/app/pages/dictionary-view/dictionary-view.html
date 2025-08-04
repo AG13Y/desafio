@@ -2,20 +2,28 @@
 
   <div class="cabecalho">
     <h1 class="texto" [style.color]="dictionary?.cor_titulo">
+
       {{ dictionary?.nome }}
+
     </h1>
     <span class="btn-icone" title="Palavras">
+
       <a [routerLink]="['/dictionary-words', dictionary?.id]" [style.color]="dictionary?.cor_icone">
+
         <i class="bi bi-alphabet"></i>
       </a>
     </span>
 
     <span class="btn-icone" title="Configurar" [style.color]="dictionary?.cor_icone" (click)="openModal(dictionary)">
+
       <i class="bi bi-gear-fill"></i>
+
     </span>
 
     <span class="btn-icone" title="Voltar" [style.color]="dictionary?.cor_icone" (click)="voltar()">
+
       <i class="bi bi-arrow-left"></i>
+
     </span>
     
   </div>
@@ -27,27 +35,37 @@
     @if (letras.length > 1) {
 
     @for (letra of letras; track letra) {
+
     <button [class.selected]="letra === letraSelecionada" (click)="filtrarPorLetra(letra)">
+
       {{ letra }}
+
     </button>
     }
 
     <button [class.selected]="letraSelecionada === ''" (click)="filtrarPorLetra('')">
+
       Todos
+
     </button>
     }
   </div>
 
   <table class="table table-striped">
     <tbody>
+
       @for (palavra of palavrasPaginadas; track palavra.id) {
+        
       <tr>
         <td class="td-nome-palavra">
           <div class="td-texto">
+
             {{ palavra.texto }}
+
           </div>
 
           @if (palavra.definicao_extra && palavra.definicao_extra.trim() !== '') {
+
           <div class="td-vermais">
             <a class="btn-vermais" [style.color]="dictionary?.cor_titulo" (click)="openModalViewMore(palavra)">
               ver mais
@@ -55,6 +73,7 @@
           </div>
           }
           <div style="width:100%">
+
             {{ palavra.definicao }}
 
           </div>

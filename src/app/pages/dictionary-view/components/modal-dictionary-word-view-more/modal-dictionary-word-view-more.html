@@ -1,13 +1,20 @@
 
 <div class="cabecalho" [style.backgroundColor]="dictionary?.cor_titulo">
+
   <span class="icone"><i class="bi bi-file-earmark"></i></span>
+
   <h1 >{{palavra?.texto}}</h1>
+
   <span class="btn-icone"><i class="bi bi-x-lg" (click)="closeModal()" ></i></span>
 </div>
 
 <div class="body">    
+
     <p [innerHTML]="palavra?.definicao_extra">{{palavra?.definicao_extra}}</p>
+
 </div>
 <div class="rodape">
+
   <button class="btn btn-secondary" (click)="closeModal()" [style.backgroundColor]="dictionary?.cor_botao" [style.color]="dictionary?.cor_botao_fonte">Fechar</button>
+  
 </div>

@@ -64,7 +64,9 @@ describe('Home Component', () => {
   });
 
   it('Deveria abrir o modal com os dados corretos', () => {
+    
     const mockDict = { id: 2, nome: 'Teste' };
+
     const spy = spyOn(modalService, 'show').and.callThrough();
 
     component.openModal(mockDict);
@@ -74,6 +76,7 @@ describe('Home Component', () => {
 
 
   it('Deveria chamar putDictionary e atualizar os dados', () => {
+
     const dicionario = { id: '999', nome: 'Update Test' };
 
     const putSpy = spyOn(dictionaryService, 'putDictionary').and.callThrough();

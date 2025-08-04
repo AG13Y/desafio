@@ -31,25 +31,29 @@ export class DictionaryView {
   letraSelecionada: string = '';
   palavrasPaginadas: IDictionaryWord[] = [];
 
+  bsModalRef?: BsModalRef;
+
+  constructor(private modalService: BsModalService) { }
+
   ngOnInit() {
     this.dictionaryId = String(this.route.snapshot.paramMap.get('id'));
 
     if (this.dictionaryId) {
+
       this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
+
         this.dictionary = data;
         this.getPalavras(true);
       });
     }
   }
 
-  bsModalRef?: BsModalRef;
-
-  constructor(private modalService: BsModalService) { }
-
   openModal(dictionary: any) {
+
     this.bsModalRef = this.modalService.show(ModalDictionary, {
       initialState: {
         dictionary,
+
         onSave: () => {
           this.dicionaryService.getDictionary(this.dictionaryId).subscribe(data => {
             this.dictionary = data;
@@ -62,18 +66,22 @@ export class DictionaryView {
   }
 
   openModalViewMore(palavra: any) {
+
   this.bsModalRef = this.modalService.show(ModalDictionaryWordViewMore, {
     initialState: {
       palavra,
       dictionary: this.dictionary
     },
+
     class: 'custom-modal-size'
+
   });
 }
 
   getPalavras(forceFirst: boolean = false) {
 
     this.wordService.getDictionaryTexts(this.dictionaryId).subscribe(textos => {
+
       let palavrasFiltradas = textos.filter(texto => texto.dicionarioId === this.dictionaryId);
 
       this.palavras = palavrasFiltradas;
@@ -84,14 +92,16 @@ export class DictionaryView {
   setupPagination(forceFirst: boolean = false) {
 
     if (this.palavras.length < 25) {
+
       this.letras = [];
+
       this.letraSelecionada = '';
+
       this.palavrasPaginadas = this.palavras;
       return;
     }
 
     this.letras = Array.from(new Set(this.palavras.map(p => p.texto[0].toUpperCase()))).sort();
-
 
     if (this.letraSelecionada) {
 
@@ -105,28 +115,17 @@ export class DictionaryView {
 
       this.letraSelecionada = this.letras[0];
       this.filtrarPorLetra(this.letraSelecionada);
-
     }
   }
 
   filtrarPorLetra(letra: string) {
+
     this.letraSelecionada = letra;
+
     if (letra === '') {
       this.palavrasPaginadas = this.palavras;
     } else {
       this.palavrasPaginadas = this.palavras.filter(p => p.texto[0].toUpperCase() === letra);
-    }
-  }
-
-  deletePalavra(id: string) {
-    const confirmDelete = window.confirm("Deseja excluir esta palavra?");
-    if (confirmDelete) {
-      this.wordService.deleteDictionaryTexts(id).subscribe(() => {
-
-        this.palavras = this.palavras.filter(p => p.id !== id);
-
-        this.setupPagination();
-      });
     }
   }
 

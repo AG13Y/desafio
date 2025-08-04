@@ -16,6 +16,7 @@ import { IDictionaryWord } from '../../../../shared/interfaces/dictionary-word.i
   styleUrl: './modal-word.css'
 })
 export class ModalWord {
+
   texto: IDictionaryWord | null = null;
   form!: FormGroup;
   onSave?: () => void;
@@ -27,9 +28,13 @@ export class ModalWord {
 
   ngOnInit() {
     this.form = this.fb.group({
+
       texto: [this.texto?.texto || '', Validators.required],
+
       definicao: [this.texto?.definicao || '', Validators.required],
+
       definicao_extra: [this.texto?.definicao_extra || ''],
+      
       dicionarioId: [this.texto?.dicionarioId || '', Validators.required]
     });
   }

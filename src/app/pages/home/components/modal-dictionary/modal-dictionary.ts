@@ -12,6 +12,7 @@ import { IDictionary } from '../../../../shared/interfaces/dictionary.interfaces
   styleUrl: './modal-dictionary.css'
 })
 export class ModalDictionary {
+
   dictionary: IDictionary | null = null;
   form!: FormGroup;
   onSave?: () => void;
@@ -23,10 +24,15 @@ export class ModalDictionary {
 
   ngOnInit() {
     this.form = this.fb.group({
+
       nome: [this.dictionary?.nome || '', Validators.required],
+
       cor_botao: [this.dictionary?.cor_botao || '#263D8A'],
+
       cor_botao_fonte: [this.dictionary?.cor_botao_fonte || '#FFFFFF'],
+
       cor_titulo: [this.dictionary?.cor_titulo || '#263D8A'],
+
       cor_icone: [this.dictionary?.cor_icone || '#263D8A']
     });
   }
@@ -39,7 +45,6 @@ export class ModalDictionary {
     if (this.form.invalid) return;
 
     if (this.dictionary?.id) {
-
 
       this.dictionaryService.putDictionary(this.dictionary.id, this.form.value).subscribe(() => {
 

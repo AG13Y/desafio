@@ -1,6 +1,9 @@
 <div class="cabecalho">
+
   <span class="btn-icone"><i class="bi bi-pencil"></i></span>
+
   <h1>{{texto?.id ? "Editar palavra" : "Nova palavra"}}</h1>
+  
   <span class="btn-icone"><i class="bi bi-x-lg" (click)="closeModal()"></i></span>
 </div>
 
@@ -10,11 +13,12 @@
     <label for="texto">Texto</label>
     <input id="texto" formControlName="texto" class="form-control" placeholder="Palavra" />
 
-    @if (form.get('texto')?.invalid && form.get('texto')?.touched) {
+      @if (form.get('texto')?.invalid && form.get('texto')?.touched) {
     <div style="color:red; font-size:0.9rem;">
       O texto é obrigatório.
     </div>
     }
+
     <label for="definicao">Definição</label>
     <input id="definicao" formControlName="definicao" class="form-control" placeholder="Definição" />
 
@@ -28,7 +32,9 @@
     <angular-editor formControlName="definicao_extra" [config]="editorConfig"></angular-editor>
 
     <span class="btn-save">
+
       <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Salvar</button>
+      
     </span>
   </form>
 </div>

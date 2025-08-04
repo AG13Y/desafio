@@ -1,28 +1,42 @@
 
 <div class="container">
-<div class="cabecalho">
-  <h1>{{ dictionary?.nome }}</h1>
-  <span class="btn-icone" title="Voltar" (click)="voltar()">
+
+  <div class="cabecalho">
+
+    <h1>{{ dictionary?.nome }}</h1>
+
+    <span class="btn-icone" title="Voltar" (click)="voltar()">
+
       <i class="bi bi-arrow-left"></i>
+
     </span>
 </div>
 
 <span class="btn-icone">
+
     <button class="btn-palavra" (click)="openModal(null)">
+
       <i class="btn-icone bi bi-plus-circle-fill" title="Adicionar"></i>
+
       <p>Palavra</p>
     </button>
   </span>
 
 <table class="table table-striped">
   <tbody>
+
     @for (palavra of palavrasPaginadas; track palavra.id; let i = $index) {
+
       <tr>
         <td class="td-texto">{{ palavra.texto }}</td>
+
         <td class="btn-icone" title="Editar" (click)="openModal(palavra)"><i class="bi bi-pencil"></i></td>
+
         <td class="btn-icone" title="Excluir" (click)="deletePalavra(palavra.id)"><i class="bi bi-x-lg"></i></td>
+
       </tr>
     }
+
   </tbody>
 </table>
 
@@ -30,17 +44,20 @@
   @if (letras.length > 1) {
 
     @for (letra of letras; track letra) {
+
       <button
         [class.selected]="letra === letraSelecionada"
         (click)="filtrarPorLetra(letra)">
         {{ letra }}
       </button>
     }
+    
     <button
       [class.selected]="letraSelecionada === ''"
       (click)="filtrarPorLetra('')">
       Todos
     </button>
-  }  
+  }
+  
   </div>
 </div>
